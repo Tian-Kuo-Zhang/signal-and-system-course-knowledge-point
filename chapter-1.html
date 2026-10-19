@@ -1,0 +1,403 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="信号与系统第一章分页精讲、分步例题及交互动画，离线可用。"><title>第一章逐点精讲 · 信号与系统</title><style>:root{--ink:#183d48;--muted:#62757b;--teal:#166c68;--orange:#cb7136;--paper:#f6f5ef;--border:#d9e2df;--nav:280px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);background:var(--paper);font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.95}a{color:var(--teal);text-underline-offset:4px}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--border);background:#fff;color:var(--ink);padding:7px 13px;border-radius:7px;line-height:1.5}button:hover{border-color:var(--teal)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #dba76c;outline-offset:3px}input,select{max-width:100%;padding:6px 8px;border:1px solid #b8cac5;border-radius:5px;background:white;color:var(--ink)}input[type=range]{width:100%;padding:0;accent-color:var(--teal)}input[type=number]{width:100px}.skip{position:absolute;top:-70px;background:white;z-index:10}.skip:focus{top:5px}.topbar{position:sticky;top:0;z-index:5;background:#fffefaf5;backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:15px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{text-decoration:none;font-size:15px;letter-spacing:.02em}.brand b{margin-left:16px;color:var(--ink);font-weight:500}.actions{display:flex;gap:8px}#menu{display:none}.layout{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);max-width:1500px;margin:auto}aside{position:sticky;top:78px;height:calc(100vh - 78px);overflow:auto;border-right:1px solid var(--border);padding:26px 20px;font-size:13px}.sidebar-head label{display:block;font-size:13px}#search{width:100%;font-size:13px;margin-top:6px}.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--teal);font-weight:700}.toc-group{margin:20px 0 6px;color:#7f8a83;font-size:11px;letter-spacing:.05em}.toc-link{display:block;padding:7px 9px;border-left:2px solid transparent;text-decoration:none;color:#5a7075;line-height:1.55}.toc-link.active{border-color:var(--teal);background:#e8f0e9;color:#154c48}.side-note{color:var(--muted);margin-top:26px;padding-top:16px;border-top:1px solid var(--border)}main{min-width:0;padding:0 48px 40px;max-width:1100px}.hero{padding:48px 0 20px}h1{font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-size:clamp(31px,4vw,48px);line-height:1.35;letter-spacing:-.035em;margin:16px 0 20px}h2{font-size:27px;line-height:1.45;margin:12px 0 24px;letter-spacing:-.025em}h3{font-size:18px;line-height:1.6;margin:30px 0 12px}h4{font-size:15px;margin:20px 0 8px}.lead{font-size:18px;color:#516d74;max-width:760px}p{margin:10px 0 16px}ul,ol{padding-left:24px}li{margin:9px 0}.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.hero-tags span,.tag{background:#e4eee6;color:#3a665a;padding:4px 10px;border-radius:4px;font-size:12px}.scope,.route{font-size:14px;background:#fffdf6;border-left:3px solid #d2a16b;padding:16px 20px;margin:20px 0}.route{border-color:var(--teal)}.scope p,.route p{margin-bottom:0}.lesson{border-top:1px solid var(--border);padding:35px 0 28px;scroll-margin-top:84px}.lesson-top{color:var(--muted);font-size:12px;display:flex;gap:16px;flex-wrap:wrap}.lesson-top .optional{color:#9c6232}.eq{overflow-x:auto;background:#eaf1ef;border:1px solid #d9e6e2;border-radius:8px;padding:16px 20px;margin:18px 0;font-family:"Cambria Math","Times New Roman","Microsoft YaHei",serif;font-size:20px;line-height:1.9;letter-spacing:.01em}.eq small{display:block;font-family:"Segoe UI","Microsoft YaHei",sans-serif;font-size:12px;color:var(--muted);margin-top:6px}.eq sup,.eq sub{font-size:70%}.note,.mistake,.example{padding:14px 18px;background:#fff;border-left:3px solid #72a8a0;margin:20px 0;font-size:15px}.mistake{background:#fff5e9;border-color:#d69b56}.example{background:#fffdf7;border-color:#aaa979}.note strong,.mistake strong,.example strong{display:block;margin-bottom:5px}.steps{counter-reset:steps;padding-left:0;list-style:none}.steps li{position:relative;padding:0 0 10px 37px}.steps li:before{counter-increment:steps;content:counter(steps);position:absolute;left:0;top:3px;background:#e3ede8;color:#2b6860;width:23px;height:23px;border-radius:50%;font-size:12px;text-align:center;line-height:23px}.lab{background:white;border:1px solid #cbdcd5;border-radius:12px;margin:26px 0;overflow:hidden}.lab-head{padding:16px 20px;border-bottom:1px solid #e4ebe6;background:#f0f5f0}.lab-head strong{font-size:16px}.lab-head p{font-size:13px;color:#546f72;margin:5px 0 0}.lab canvas{display:block;width:100%;height:350px;touch-action:pan-y}.lab canvas.tall{height:430px}.controls{padding:16px 20px;display:flex;gap:16px 22px;align-items:center;flex-wrap:wrap;border-top:1px solid #e4ebe6}.control{min-width:130px;flex:1;font-size:13px}.control select{width:100%}.control output{float:right;color:var(--teal);font-weight:700}.controls .play{flex:0 0 auto;background:var(--teal);color:white}.lab-status{background:#f4f7f2;padding:12px 20px;font-size:13px;font-variant-numeric:tabular-nums;min-height:48px}.legend{font-size:12px;display:flex;gap:20px;padding:10px 20px;flex-wrap:wrap}.blue{color:#216b99}.orange{color:var(--orange)}.green{color:#39846b}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.mini-grid>div{border:1px solid var(--border);padding:16px;border-radius:8px;background:#fff}.mini-grid p{font-size:14px}.property-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.property-list div{background:white;border:1px solid var(--border);padding:12px 15px;font-size:14px}.question{border:1px solid var(--border);border-radius:9px;padding:20px 24px;margin:18px 0;background:#fffef9}.question h3{margin-top:0}.question details{border-top:1px solid var(--border);padding-top:10px;margin-top:15px}summary{cursor:pointer;color:var(--teal);font-size:14px;font-weight:650}.question .eq{font-size:18px}.answer-form{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:14px}.feedback{font-size:14px;color:#256759}.resource-link{font-size:12px}.check{display:block;margin-top:25px;font-size:13px;color:#58756c}.check input{accent-color:var(--teal);margin-right:8px}footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted);font-size:12px}.hidden-by-search{display:none!important}@media(max-width:1050px){:root{--nav:230px}main{padding:0 30px 30px}.brand b{display:none}}@media(max-width:760px){.layout{display:block}.topbar{padding:12px 16px}.topbar button{font-size:12px}#menu{display:block}aside{display:none;position:fixed;z-index:6;top:61px;left:0;width:290px;background:var(--paper);height:calc(100vh - 61px);box-shadow:8px 0 30px #183d4822}aside.open{display:block}main{padding:0 19px 25px}.hero{padding-top:28px}h1{font-size:31px}h2{font-size:24px}.mini-grid,.property-list{grid-template-columns:1fr}.eq{font-size:18px;padding:13px 15px}.controls{gap:14px;padding:14px}.control{min-width:110px}.lab canvas{height:300px}.lab canvas.tall{height:380px}.question{padding:16px}.hero-tags span{font-size:11px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.topbar,aside,.controls,.check,.answer-form{display:none!important}.layout{display:block}main{max-width:none;padding:0;color:#111;background:white}.hero{padding-top:0}body{font-size:11pt;background:white}h1{font-size:26pt}h2{font-size:19pt}.lesson{break-inside:auto}.eq,.example,.note,.mistake,.lab{break-inside:avoid}.lab canvas{height:280px}.hidden-by-search{display:block!important}a{color:#111}footer{font-size:9pt}}
+.mathop{display:inline-grid;grid-template-columns:auto;grid-template-rows:auto auto auto;vertical-align:middle;text-align:center;margin:0 .16em;line-height:1.08}.mathop .symbol{grid-row:2;font-size:1.35em}.mathop .lower{grid-row:3;font-size:.6em;vertical-align:baseline}.mathop .upper{grid-row:1;font-size:.6em;vertical-align:baseline}
+html.paged{scroll-behavior:auto}.course-page[hidden]{display:none!important}.reader-pager{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--border);font-size:13px}.reader-pager a{text-decoration:none;border:1px solid var(--border);background:#fff;padding:8px 13px;border-radius:7px;width:max-content;max-width:100%}.reader-pager .page-prev{grid-column:1}.reader-pager .page-position{grid-column:2;color:var(--muted);text-align:center}.reader-pager .page-next{grid-column:3;justify-self:end;background:var(--teal);color:#fff}.reader-pager [hidden]{display:none!important}.reader-pager-bottom{margin-top:28px;border-top:1px solid var(--border);border-bottom:0}.course-page.lesson{border-top:0;padding-top:28px}.course-page.hero{padding-top:28px}#chapterIndex{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.chapter-group{border:1px solid var(--border);border-radius:10px;padding:16px 20px;background:#fffef9}.chapter-group h3{margin:0 0 10px;font-size:15px}.chapter-group a{display:block;text-decoration:none;font-size:14px;padding:8px 0;border-top:1px solid #e6ece8;line-height:1.65}.chapter-group a:hover{text-decoration:underline}@media(max-width:760px){#chapterIndex{grid-template-columns:1fr}.reader-pager{grid-template-columns:1fr 1fr;gap:9px;font-size:12px}.reader-pager .page-position{grid-row:1;grid-column:1/-1;text-align:left}.reader-pager .page-prev{grid-row:2;grid-column:1}.reader-pager .page-next{grid-row:2;grid-column:2}.reader-pager a{padding:7px 11px}}@media print{.reader-pager{display:none!important}.course-page[hidden]{display:none!important}}
+
+.chapter-jump{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;margin:12px 0}.lab canvas{height:400px}.lab details{padding:10px 20px;font-size:13px}.lab-status{white-space:pre-line}.diagram{overflow:auto;padding:20px;background:#fff;border:1px solid var(--border);border-radius:8px;font-family:Consolas,"Microsoft YaHei",monospace;white-space:pre;line-height:1.7}.coverage{font-size:14px}.lab button.reset{font-size:13px}@media(max-width:760px){.lab canvas{height:380px}.eq{max-width:100%}.chapter-jump{gap:10px}}
+main p,main li,.example,.note,.mistake{overflow-wrap:anywhere}
+</style></head><body>
+<a class="skip" href="#main">跳到正文</a><header class="topbar"><a href="#start" class="brand">∿ 信号与系统 <b>第一章逐点精讲</b></a><div class="actions"><button id="print">打印当前页 / 保存 PDF</button><button id="menu" aria-controls="sidebar" aria-expanded="false">目录</button></div></header>
+<div class="layout"><aside id="sidebar"><div class="sidebar-head"><p class="eyebrow">SIGNALS & SYSTEMS / CHAPTER 01</p><label for="search">查知识点或公式关键词</label><input id="search" type="search" placeholder="例如：时移、周期、冲激、线性"><p id="searchStatus" aria-live="polite"></p></div><nav id="toc" aria-label="课程知识点目录"></nav><div class="side-note">先用纸笔算，再拖动图形核对。<p id="readingProgress"></p><div class="chapter-jump"><a href="chapter-1.html">第一章</a><a href="chapter-2.html">第二章</a><a href="chapter-3.html">第三章</a><a href="chapter-4.html">第四章</a><a href="index.html">四章总入口</a></div></div></aside>
+<main id="main"><nav class="reader-pager" aria-label="页首翻页"><a class="page-prev" href="#start">← 上一节</a><span class="page-position" aria-live="polite"></span><a class="page-next" href="#start">下一节 →</a></nav><section id="start" class="hero"><p class="eyebrow">SIGNALS & SYSTEMS / CHAPTER 01</p><h1>信号怎样描述，系统怎样判断？</h1><p class="lead">从一条曲线出发，理解时间变换、周期、能量与功率，再用定义判断系统的六种性质。</p><div class="hero-tags"><span>按知识点分页</span><span>交互图与播放演示</span><span>12 道分步自测</span><span>完全离线</span></div><div class="scope"><strong>跟着你的课程学</strong><p>依据同目录《Chapter1.pdf》，共 122 页。覆盖课件 1.1–1.6 的知识主线；第 1–10 页课程安排不逐页复述，第 122 页仅给出的教材习题编号不猜测题意。 页码均按 PDF 从 1 起计数。每节包括概念解释、公式条件、例题和易错点；补充例题均为自编。</p></div><div class="route"><b>一次读一节，按目录自由跳转</b><p>点击左侧目录或下方知识点。手机点右上角“目录”。页首、页尾都可翻页；刷新与浏览器前进／后退保留当前章节。动画默认暂停，切换章节自动暂停。</p><div class="chapter-jump"><a href="chapter-1.html">第一章</a><a href="chapter-2.html">第二章</a><a href="chapter-3.html">第三章</a><a href="chapter-4.html">第四章</a><a href="index.html">四章总入口</a></div></div><div id="chapterIndex" aria-label="章节总览"></div></section>
+<div id="lessons"></div><section class="lesson" id="practice"><div class="lesson-top"><span>巩固 / 自编练习</span></div><h2>12 道分步例题与自测</h2><p>先写推导再核对。数值输入只检查一个关键步骤，误差容限为 0.001；完整解答会说明剩余结论和条件。</p><div id="questions"></div></section>
+<section class="lesson" id="sources"><div class="lesson-top"><span>资料与适用范围</span></div><h2>课件对应与使用说明</h2><p>主要依据：<span class="source-name">Chapter1.pdf（课程原课件，分享包未附）</span>（122 页）。每节顶部标明对应 PDF 页码。文字与公式重新推导，图形和补充练习为本讲义制作。未逐题复现只有编号、缺少题干的课后作业。</p><div id="coverage" class="coverage"></div><h3>如何看图</h3><p>连续信号用曲线，离散信号用茎状图。冲激的箭头表示权重／面积，有限宽脉冲只是近似。每张图下方列出当前参数、数值结果和可观察现象；图中绘制区间有限，不能仅凭画面就证明全时间性质。</p><h3>离线与进度</h3><p>打开“第一章完整精讲.html”即可使用，无需网络或安装。目录、公式、动画、自测均内嵌。阅读勾选尽可能保存在本浏览器本地址；浏览器限制本地存储时不影响阅读。跨章链接需保留整包文件；课程 PDF 仅作为编写来源，不是阅读依赖。</p></section><nav class="reader-pager" aria-label="页尾翻页"><a class="page-prev" href="#start">← 上一节</a><span class="page-position" aria-live="polite"></span><a class="page-next" href="#start">下一节 →</a></nav><footer>2026-10-16 · 信号与系统第一章学习讲义 · 按节阅读 · 打印当前页及已展开解答</footer></main></div>
+<script>'use strict';
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.CourseMath=api;})(typeof globalThis!=='undefined'?globalThis:this,()=>{
+const TAU=2*Math.PI;
+const step=t=>t<0?0:t===0?.5:1;
+const unit=n=>n>=0?1:0;
+const base=t=>t<0||t>3?0:t<=1?t:(3-t)/2;
+const seq=n=>({'-1':2,0:1,1:3,2:-1}[n]||0);
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+const period=(p,q)=>q/gcd(p,q);
+const transform=(s,a,b)=>(s-b)/a;
+function finiteEnergy(kind,T){if(kind==='exp')return -Math.expm1(-2*T)/2;if(kind==='sine')return T-Math.sin(2*T)/2;if(kind==='step')return T;return 2*T**3/3;}
+function convolve(x,h){const out=Array(x.length+h.length-1).fill(0);x.forEach((v,i)=>h.forEach((w,j)=>out[i+j]+=v*w));return out;}
+function convAt(x,h,n){return x.reduce((s,v,k)=>s+v*(h[n-k]||0),0);}
+const rectOverlap=(t,A,B)=>Math.max(0,Math.min(A,t)-Math.max(0,t-B));
+function geometric(a,n){if(n<0)return 0;let sum=0,p=1;for(let k=0;k<=n;k++){sum+=p;p*=a;}return sum;}
+function expConv(t,a,b){if(t<=0)return 0;const d=b-a;return Math.abs(d)<1e-10?t*Math.exp(-a*t):Math.exp(-a*t)*(-Math.expm1(-d*t))/d;}
+function ode(t,a,b,y0=0){if(t<0)return 0;const c=a+b;return y0*Math.exp(-a*t)+(Math.abs(c)<1e-10?t*Math.exp(-a*t):Math.exp(-a*t)*Math.expm1(c*t)/c);}
+function recursive(a,input,y0=0){let prev=y0;return input.map(v=>prev=a*prev+v);}
+const stepResponse=(t,tau)=>t<=0?0:-Math.expm1(-t/tau);
+const pulseResponse=(t,d)=>t<0?0:((1-Math.exp(-t))-(t>=d?1-Math.exp(-(t-d)):0))/d;
+const fmt=(x,d=4)=>Math.abs(x)<1e-9?'0':Number(x.toFixed(d)).toString();
+return{TAU,step,unit,base,seq,gcd,period,transform,finiteEnergy,convolve,convAt,rectOverlap,geometric,expConv,ode,recursive,stepResponse,pulseResponse,fmt};
+});
+</script><script>'use strict';
+const CourseLessons=[];
+function lesson(id,title,pages,group,body,lab=''){CourseLessons.push({id,title,pages,group,body,lab});}
+const eq=(s,n='')=>`<div class="eq" role="math">${s}${n?`<small>${n}</small>`:''}</div>`;
+const example=(t,s)=>`<div class="example"><strong>${t}（自编）</strong>${s}</div>`;
+const note=s=>`<div class="note"><strong>理解这一点</strong>${s}</div>`;
+const mistake=s=>`<div class="mistake"><strong>易错点</strong>${s}</div>`;
+
+lesson('signal','1.1 信号、系统和自变量','11–19','A · 信号是什么',`
+<p><b>信号是携带信息的函数，系统是把输入函数变成输出函数的规则。</b> x(t) 中的 t 是时间位置，x(t) 是该位置的数值；系统 S 则接收整条输入，产生 y=S{x}。一段录音可以是信号，均衡器可以是系统。</p>
+${eq('输入 x → 系统 S → 输出 y=S{x}')}
+<h3>不要混淆“一个数”和“一条信号”</h3><p>x(2)=3 是一个采样位置的值；x(t)=3 是每个时刻都等于 3 的整条信号。求 y(2) 可能只需要 x(2)，也可能需要此前全部输入，这正是后面“记忆性”的区别。</p>
+${example('温度与显示器','输入 x(t) 是实际温度；若显示器 y(t)=x(t−2)，它显示的是两秒前的温度。t=5 时输出 y(5)=x(3)，不能误写成 x(5)−2。另一个显示器 y(t)=x(t)+2 是读数偏高 2 度，改变的是幅值。')}
+<h3>系统不总能直接用一个 h(t) 表示</h3><p>一般系统用算子 S 描述。第二章中，满足线性、时不变及相应零状态条件的系统，才可以由冲激响应 h 完整描述。非线性系统例如 y=x²，不能任意套卷积公式。</p>
+${note('后面的学习可以一直问两个问题：这一操作在改横轴还是纵轴？这一结论对任意输入都成立，还是只对当前例子成立？')}`);
+
+lesson('types','1.1 连续时间、离散时间与采样','12–20','A · 信号是什么',`
+<p>连续时间信号 x(t) 对实数 t 定义；离散时间信号 x[n] 只对整数 n 定义。离散指<b>自变量的取值集合</b>，不代表幅度一定是整数，也不代表只取 0、1。</p>
+${eq('x[n]=x<sub>c</sub>(nT<sub>s</sub>)，f<sub>s</sub>=1/T<sub>s</sub><br>若 x<sub>c</sub>(t)=cos(Ωt)，则 x[n]=cos(ωn)，ω=ΩT<sub>s</sub>', 'Ω：rad/s；ω：rad/sample；n 没有秒的单位。')}
+<h3>采样和量化做的是两件事</h3><p>采样选取时间位置，量化将幅度舍入到有限等级。只采样、未量化的模型仍可有任意实数幅度；通常数字信号兼有时间离散和幅度量化。课件中的 analog/digital 对照在工程上常见，但概念判断应分别看这两条轴。</p>
+${example('采样余弦','x_c(t)=cos(4πt)，物理频率 f=2 Hz。若 T_s=1/8 s，则 x[n]=cos(πn/2)，样本为 1、0、−1、0、1……，离散周期 4 个样本，对应 0.5 s。')}
+${mistake('茎状图的样本之间没有自动规定的曲线。把点连起来只是画图习惯，不能据此声称恢复了原连续信号。后续采样理论还需要带宽等条件。')}`, 'sampling');
+
+lesson('ct-energy','1.1.2 连续信号的能量与功率','21–22、25','A · 信号是什么',`
+<p>将 |x(t)|² 看成瞬时强度，对时间累积就是能量，再除以观察时长就是平均功率。电压接在 1 Ω 电阻上时正好对应物理功率；一般信号中的这些量是统一的数学度量，单位随 x 的物理含义而定。</p>
+${eq('E=∫<sub>−∞</sub><sup>∞</sup>|x(t)|²dt<br>P=lim<sub>T→∞</sub> (1/2T)∫<sub>−T</sub><sup>T</sup>|x(t)|²dt','复信号 |x|²=x·x*，不能用 x² 代替。采用对称长时间平均。')}
+${example('右边衰减指数的能量','x(t)=Ae<sup>−at</sup>u(t)，a&gt;0。负时间为 0，因此 E=|A|²∫₀∞e<sup>−2at</sup>dt=|A|²/(2a)。当 A=2、a=1，E=2。E 有限，而 2T 越来越大，所以 P=0。')}
+<h3>周期信号只需看一个周期</h3><p>若周期为 T₀ 且单周期能量有限，长区间包含越来越多完整周期，边界剩余部分占比趋于 0，故 P=(1/T₀)∫₀<sup>T₀</sup>|x|²dt。非零周期信号总能量一般无穷。</p>
+${example('余弦与复指数','Acos(Ωt+φ)，Ω≠0，利用 cos²θ=(1+cos2θ)/2 得 P=A²/2。Ae<sup>jΩt</sup> 的模恒为 |A|，所以 P=|A|²。A=2 时两者分别是 2 和 4。')}`);
+
+lesson('dt-energy','1.1.2 离散序列的能量与功率','23–25','A · 信号是什么',`
+<p>连续时间用积分，离散时间对样本求和。区间 −N 到 N 一共有 <b>2N+1</b> 个点，归一化分母要与样本数对应。</p>
+${eq('E=∑<sub>n=−∞</sub><sup>∞</sup>|x[n]|²<br>P=lim<sub>N→∞</sub> (1/(2N+1))∑<sub>n=−N</sub><sup>N</sup>|x[n]|²')}
+${example('几何级数求能量','x[n]=(1/2)ⁿu[n]。E=1+1/4+1/16+…=1/(1−1/4)=4/3，P=0。若 x[−1]=2、x[0]=−1、x[1]=3，其余为 0，则 E=4+1+9=14，负样本的能量仍是正数。')}
+<h3>周期序列</h3><p>周期为 N₀ 时，P=(1/N₀)Σ<sub>n=0</sub><sup>N₀−1</sup>|x[n]|²。只取 N₀ 个不同样本，不把末端重复的 x[N₀]=x[0] 再算一次。</p>
+${example('不要背错离散余弦功率','cos(πn/2) 的一个周期为 [1,0,−1,0]，P=1/2；但 cos(πn)=(−1)ⁿ，所有样本平方都是 1，所以 P=1。离散余弦在频率 0、π（模 2π）处不能盲套 A²/2。')}
+${mistake('E_DT=Σ|x[n]|² 本身没有乘 T_s。若用采样近似连续能量，才用 E_CT≈T_sΣ|x[n]|²；这是另一个计算目的。')}`);
+
+lesson('classification','能量信号、功率信号与“两者都不是”','21–25','A · 信号是什么',`
+<p>能量信号通常定义为 0&lt;E&lt;∞；功率信号为 0&lt;P&lt;∞。能量有限则 P=0，不能同时满足两种严格定义。零信号 E=P=0，常单独列为退化情形。</p>
+<ol class="steps"><li>先找有限持续、衰减或周期等结构，不急着硬积分。</li><li>有限能量直接推出平均功率 0；非零周期信号可用一个周期求 P。</li><li>都不符合时回到定义。有些信号 E、P 均发散，有些长时间平均根本不存在。</li></ol>
+${example('三个典型判断','e<sup>−t</sup>u(t)：E=1/2，能量信号。u(t)：在 [−T,T] 内能量为 T，故 P=1/2，属于功率信号。t：区间能量 2T³/3，P_T=T²/3→∞，两者都不是。')}
+${mistake('u(t) 的对称平均功率为 1/2，而在 [0,T] 上做单边平均会得到 1。请始终说明采用哪种平均定义。e<sup>−t</sup>若没有 u(t)，在 t→−∞ 时增长，也不是有限能量信号。')}
+<p>下面同时显示有限窗口能量 E_T 和平均功率 P_T。看 T 增大后的趋势，而不是只看某个有限窗口的数值。</p>`, 'energy');
+
+lesson('shift','1.2 时间平移：用特征点定位','26–28','B · 变换与对称',`
+<p>y(t)=x(t−t₀) 把原信号延迟 t₀；t₀&gt;0 时向右移。原因是原来发生在 s 的事件，必须等到 t−t₀=s，即 t=s+t₀ 才出现。</p>
+${eq('x(s) 的事件位置 s → y(t)=x(t−t₀) 的位置 t=s+t₀<br>离散：y[n]=x[n−n₀]，n₀ 为整数')}
+${example('门脉冲的平移','x(t) 在 0≤t&lt;2 为 1，其余为 0。y(t)=x(t−3) 非零条件是 0≤t−3&lt;2，解得 3≤t&lt;5。z(t)=x(t+1) 则在 −1≤t&lt;1 非零。高度都仍是 1。')}
+<h3>时延的物理意义</h3><p>传播、缓冲和传输线路会推迟输入出现的位置。x(t)+3 是幅度偏置；x(t+3) 才是时间提前。观察峰值、拐点和起止时刻比单纯记“左加右减”更可靠。</p>
+${note('对于 x(at+b)，实际位置不仅由 b 决定，还受 a 的正负影响。下一节先讲翻转和缩放，再用统一坐标公式解决复合变换。')}`);
+
+lesson('reverse-scale','1.2 时间反转与尺度变化','29–30、35','B · 变换与对称',`
+<p>x(−t) 将关于 t=0 的左右位置互换；x(at) 将原位置 s 映射到 s/a。|a|&gt;1 时持续时间缩短，0&lt;|a|&lt;1 时拉长；a&lt;0 还包括反转。</p>
+${eq('y(t)=x(at)，a≠0：t=s/a<br>有限能量时 E<sub>y</sub>=E<sub>x</sub>/|a|；周期信号 T<sub>y</sub>=T<sub>x</sub>/|a|')}
+${example('两个边界就能画出变换','x(t) 的非零区间为 [1,3]，则 x(2t) 支持在 [1/2,3/2]；x(−2t) 支持在 [−3/2,−1/2]。原来在 t=1 的上升沿，反转后跑到右端并成为下降沿。')}
+<h3>为什么能量有 1/|a|？</h3><p>设 s=at，dt=ds/a。a&lt;0 时积分上下限交换，最后仍得到正系数 1/|a|。幅值本身没有变化，但维持同样强度的时间缩短了。</p>
+${mistake('x(2t) 不是 2x(t)。前者压缩横轴，后者放大纵轴；后者会让能量乘 4。a=0 时 y(t)=x(0) 成为常量，不能套含 1/a 的公式。')}`);
+
+lesson('affine','1.2 复合变换 x(at+b) 的统一解法','31、35','B · 变换与对称',`
+<p>容易混乱的地方是“先移还是先缩”。最稳妥的方法是不猜操作顺序，而是追踪原波形上的每个关键位置 s。</p>
+${eq('s=at+b ⇒ t=(s−b)/a，a≠0')}
+<ol class="steps"><li>标出原信号的端点、峰值和跳变点 s₁,s₂,…。</li><li>逐点代入 (s−b)/a，保留原来的纵坐标。</li><li>a&lt;0 时新位置顺序颠倒；按从小到大重新排好。</li><li>若另有外部幅度因子 C，再把纵坐标乘 C。</li></ol>
+${example('带反转的复合变换','x(t)=t（0≤t≤2），其他为 0。y(t)=x(−2t+1)。原 0、2 映射为 1/2、−1/2，因此 y(t)=1−2t（−1/2≤t≤1/2），从高度 2 降到 0。也可直接解 0≤−2t+1≤2 得同样区间。')}
+${note('代数上 x(at+b)=x(a(t+b/a))。如果按图形操作，也可先构造 g(t)=x(t+b)，再取 g(at)；关键是每一步都写清新函数，不能把两种顺序的位移量混用。')}
+<p>拖动 a、b，观察原峰值的位置 s=1 如何映射到 (1−b)/a；负 a 会翻转波形。这里的 a 控件明确排除了 0。</p>`, 'transform');
+
+lesson('dt-transform','1.2 离散时间缩放：抽取与插零','32–34','B · 变换与对称',`
+<p>离散序列只有整数下标，因此不能把连续时间的拉伸直接搬过来。x[2n] 对每个整数 n 都有定义，它仅保留原来的偶数下标；x[n/2] 遇到奇数 n 时没有原始样本可取。</p>
+${eq('抽取：y[n]=x[Mn]，M 为正整数<br>插零：z[n]=x[n/L]（n 是 L 的倍数），否则为 0')}
+${example('索引和值要一起写','设 x[−1]=2，x[0]=1，x[1]=3，x[2]=−1。抽取 x[2n] 后，y[0]=1、y[1]=−1，其余为 0，原奇数位置被丢弃。插零 L=2 后，z[−2]=2、z[0]=1、z[2]=3、z[4]=−1，奇数位置补 0。')}
+<h3>插零不等于插值</h3><p>插零规定新位置为 0；插值则需额外规则（如线性插值或低通重建）估计新值。同一个原序列可以对应无数条连续曲线，因此“中间那个点应该是多少”没有唯一答案。</p>
+${mistake('x[3n−1] 只访问原序列中模 3 余 2 的位置，通常丢失信息。序列长度改变时还要保留 n=0 在哪，不能只列一个没有起点的数组。')}`, 'dt-transform');
+
+lesson('period','1.2.2 周期与基本周期','36–42','B · 变换与对称',`
+${eq('CT：x(t+T)=x(t)，∀t，T&gt;0<br>DT：x[n+N]=x[n]，∀n，N 为正整数')}
+<p>一个有效周期的正整数倍仍是周期。最小正周期叫基本周期；连续常量每个正数都是周期，所以没有最小正周期；离散常量的最小正整数周期是 1。</p>
+<h3>多频信号求共同周期</h3><p>每个非零正弦分量都必须在 T 内转整数圈。对互异的有限频率分量，频率之比为有理数时可找共同周期；若有抵消或系数为 0，应先化简。</p>
+${example('两个课件主题的计算','cos(3t)+sin(2t)：要求 3T=2πm、2T=2πn。最小解 m=3,n=2，T₀=2π。cos(πt)+sin(2t) 则要求 m/n=π/2，无理，两个系数非零时不周期。')}
+${example('周期延拓','以一个有限脉冲 p(t) 为模板，y(t)=Σ<sub>k∈ℤ</sub>p(t−kT)。在级数有定义的前提下，将 t 换成 t+T，再令 m=k−1，得到同一个和，所以 T 是周期。模板有重叠时要叠加，不能把它们简单截断拼接。')}
+${mistake('“画面看着重复”不是定义。e<sup>−t</sup>cos t 的峰间距虽固定，但幅度在变化，整条信号不周期。周期性需要对所有时刻成立。')}`);
+
+lesson('odd-even','1.2.3 奇偶性及唯一分解','43–44','B · 变换与对称',`
+<p>偶信号满足 x(−t)=x(t)，图形左右镜像；奇信号满足 x(−t)=−x(t)，关于原点反对称。离散情况将 t 换成 n 即可。</p>
+${eq('x<sub>e</sub>(t)=[x(t)+x(−t)]/2<br>x<sub>o</sub>(t)=[x(t)−x(−t)]/2<br>x=x<sub>e</sub>+x<sub>o</sub>')}
+<h3>为什么这组公式正确？</h3><p>把 t 换成 −t，加法不变，因此第一项为偶；减法变号，因此第二项为奇；两项相加，x(−t) 抵消。若还有另一组奇偶分解，两组偶部分的差也必须是奇函数，唯一能同时奇且偶的函数是零，所以分解唯一。</p>
+${example('右边指数的奇偶分量','x(t)=e<sup>−t</sup>u(t)，取 u(0)=1/2。x_e(t)=e<sup>−|t|</sup>/2，x_o(t)=sgn(t)e<sup>−|t|</sup>/2。正时间两项相加为 e<sup>−t</sup>，负时间恰好抵消为 0。')}
+${mistake('奇偶性不等于实虚性。复信号同样能做上述分解，公式中没有共轭。奇函数若在 0 有普通函数值，必须 x(0)=0；但连续积分不受单点取值影响。')}`, 'odd-even');
+
+lesson('real-exp','1.3.1 连续实指数与正弦信号','46–54','C · 基本信号',`
+<p>x(t)=Ce<sup>at</sup> 中，a&gt;0 表示沿正时间增长，a&lt;0 表示沿正时间衰减，a=0 是常量。写成 Ce<sup>−t/τ</sup> 时，τ&gt;0 称为时间常数：过 τ 后幅度降为初始的 1/e。</p>
+${eq('x(t)=Acos(Ωt+φ)，Ω≠0<br>T₀=2π/|Ω|，f₀=|Ω|/(2π)')}
+${example('从参数读物理意义','3cos(4πt+π/3) 的幅度为 3，角频率 4π rad/s，频率 2 Hz，周期 0.5 s，初值为 3cos(π/3)=1.5。它等于 3cos[4π(t+1/12)]，即相对零相位余弦提前 1/12 s。')}
+<h3>谐波为什么重要？</h3><p>e<sup>jkΩ₀t</sup> 在 T₀=2π/Ω₀ 内旋转整数 k 圈，因此这组信号共享周期 T₀。第三章会用这些“谐波积木”表示周期信号。只出现第 2、4 次谐波时，实际基本周期还可能更短。</p>
+${mistake('相位的单位是 rad，时延的单位是 s。要把相位差换成时间差，应除以角频率；不能直接把 π/3 写成“提前 π/3 秒”。')}`);
+
+lesson('complex','1.3.1 复指数：旋转与包络','7、47、51–56','C · 基本信号',`
+<p>复数 z=a+jb 可看作平面上的向量，|z|=√(a²+b²)，相位按象限用 atan2(b,a)。欧拉公式把旋转与正弦联系起来。</p>
+${eq('e<sup>jθ</sup>=cosθ+j sinθ<br>Ce<sup>(r+jΩ)t</sup>=|C|e<sup>rt</sup>[cos(Ωt+φ)+j sin(Ωt+φ)]')}
+<p>Ω 决定旋转方向与角速度，r 决定半径的增长或衰减，C 决定初始幅度与相位。r=0 时在圆上转，r&lt;0 时向内螺旋；实部是带指数包络的余弦。</p>
+${eq('cosθ=(e<sup>jθ</sup>+e<sup>−jθ</sup>)/2<br>sinθ=(e<sup>jθ</sup>−e<sup>−jθ</sup>)/(2j)')}
+${example('共轭向量如何产生实信号','一根长度 1/2 的向量逆时针转 θ，另一根顺时针转 θ。虚部分别为 ±sinθ/2，恰好抵消；实部相加为 cosθ。负频率就是反方向旋转，不是“负的能量”。')}
+${mistake('复指数本身同时含实部与虚部，不能直接当作 cos。计算模平方时 cos²+sin²=1，而只取实部后平均平方通常是 1/2。')}`, 'phasor');
+
+lesson('dt-exp','1.3.2 离散指数 αⁿ','57–60','C · 基本信号',`
+<p>x[n]=Cαⁿ 的相邻样本之比为 α。0&lt;α&lt;1 时向右衰减，α&gt;1 时向右增长；α 为负数时符号逐点交替，绝对值的包络由 |α|ⁿ 决定。</p>
+${eq('α=ρe<sup>jω</sup> ⇒ x[n]=|C|ρⁿe<sup>j(ωn+φ)</sup>')}
+${example('负底数没有被丢掉','(−1/2)ⁿu[n] 的样本为 1,−1/2,1/4,−1/8,…。负号对应每步多旋转 π，幅值包络按 (1/2)ⁿ 衰减。能量仍是 Σ(1/4)ⁿ=4/3。')}
+<h3>单边序列和双边序列</h3><p>αⁿu[n] 只在 n≥0 保留，可在 |α|&lt;1 时有有限能量。双边 αⁿ 若 0&lt;|α|&lt;1，在 n→−∞ 会增长；若 |α|&gt;1 则向右增长。|α|=1 时模恒定，通常是功率信号。</p>
+${mistake('α=0 的双边幂会遇到负指数和 0⁰，必须另作定义。学习“指数序列”时通常取 α≠0，不用含糊的 0ⁿ 表达单位冲激。')}`);
+
+lesson('dt-period','1.3.3 离散频率等价与周期条件','61–68','C · 基本信号',`
+${eq('e<sup>j(ω+2πm)n</sup>=e<sup>jωn</sup>，m∈ℤ<br>周期条件：ωN=2πk ⇔ ω/(2π) 为有理数')}
+<p>离散时间每次只在整数位置观察，所以每步额外转 m 个整圈完全看不出来。可将频率代表值选在 [−π,π) 或 [0,2π)。等价频率不是不同序列。</p>
+<ol class="steps"><li>把 ω/(2π) 写成最简分数 p/q。</li><li>求最小正整数 N 使 pN/q 为整数，得到 N₀=q。</li><li>多个分量先分别求周期，再取最小公倍数，并检查化简抵消。</li></ol>
+${example('四个判断','e<sup>j3πn/4</sup>：比值 3/8，所以 N₀=8。cos(n/6) 的比值 1/(12π) 无理，所以不周期。e<sup>j2πn/3</sup>+e<sup>j3πn/4</sup> 的周期为 lcm(3,8)=24。cos(1.6πn)=cos(0.4πn)，后者更易看出振荡速率。')}
+${mistake('对非退化离散正弦／复指数，“有正弦形式”不保证周期。连续的 cos(t/6) 却始终有周期 12π。零序列、常量等退化情形需单独检查。')}`, 'dt-frequency');
+
+lesson('dt-impulse','1.4.1 离散单位冲激与抽样','69–70、73','D · 阶跃与冲激',`
+${eq('δ[n]=1（n=0），否则 0<br>x[n]δ[n−k]=x[k]δ[n−k]<br>∑<sub>n=−∞</sub><sup>∞</sup>x[n]δ[n−k]=x[k]')}
+<p>δ[n−k] 只打开 n=k 这个位置。乘法得到“留下一个样本的序列”；再对 n 求和，才得到单个数 x[k]。这两个对象不能混淆。</p>
+${example('把一个序列写成冲激组合','x[−1]=2、x[0]=−1、x[2]=3，其余为 0。则 x[n]=2δ[n+1]−δ[n]+3δ[n−2]。例如 n=2 时只有最后一项为 3；n=1 时三项都为 0。')}
+${eq('x[n]=∑<sub>k=−∞</sub><sup>∞</sup>x[k]δ[n−k]')}
+<p>这里 n 是最终信号的位置，k 是遍历原样本的哑变量。固定 n 后，所有项只有 k=n 的一项活着。第二章利用线性和时不变，把每个 δ[n−k] 的响应换成 h[n−k]，便得到卷积。</p>
+${mistake('离散 δ[n] 是普通序列，δ[0]=1；连续 δ(t) 是广义函数，没有可当作普通数的“δ(0)=1”。两者符号相近，数学含义不同。')}`);
+
+lesson('dt-step','1.4.1 离散阶跃、差分与累加','71–76','D · 阶跃与冲激',`
+${eq('u[n]=1（n≥0），否则 0<br>δ[n]=u[n]−u[n−1]<br>u[n]=∑<sub>k=−∞</sub><sup>n</sup>δ[k]=∑<sub>k=0</sub><sup>∞</sup>δ[n−k]')}
+<p>第一差分记录相邻值的变化，阶跃只在 0 处从 0 变到 1，所以差分是冲激。累加则把已经经过的冲激权重保留下来。</p>
+${example('用两个阶跃框住有限区间','u[n−2]−u[n−5] 在 2≤n&lt;5 为 1，因此只有 n=2、3、4 三个样本。要覆盖 2≤n≤5，应写 u[n−2]−u[n−6]。')}
+${example('带幅值的阶梯','x[n]=2u[n]−3u[n−2]+u[n−4]。n&lt;0 为 0；n=0,1 为 2；n=2,3 为 −1；n≥4 为 0。差分 Δx[n]=2δ[n]−3δ[n−2]+δ[n−4]，每个权重就是对应跳变量。')}
+${mistake('离散区间长度包含端点：0≤n≤4 有 5 个样本。求和上下限错一位，往往就是漏掉了 u[0]=1。')}`);
+
+lesson('ct-step','1.4.2 连续阶跃与门函数','77–79','D · 阶跃与冲激',`
+<p>u(t) 在 t&lt;0 为 0、t&gt;0 为 1；t=0 的值可以按约定取 0、1/2 或 1，本讲义普通连续绘图取 1/2。改变一个孤立点不会改变普通积分，但涉及冲激与不连续点相乘时需另定约定，不能随意代值。</p>
+${eq('宽度 T 的门：g(t)=u(t)−u(t−T)，T&gt;0<br>sgn(t)=2u(t)−1（取 u(0)=1/2）')}
+${example('用阶跃表达分段信号','x(t)=2（0&lt;t&lt;1），x(t)=−1（1&lt;t&lt;3），其他为 0。每次跳变分别为 +2、−3、+1，因此 x(t)=2u(t)−3u(t−1)+u(t−3)，端点取左右平均。')}
+<h3>阶跃如何做“开关”</h3><p>x(t)u(t−a) 把 a 以前的部分关闭；x(t)[u(t−a)−u(t−b)] 只保留 a&lt;t&lt;b。窗函数乘法只保留片段，不会自动把原波形平移到 a。</p>
+${mistake('e<sup>−t</sup>u(t−2) 从 t=2 开始出现，起始右极限 e<sup>−2</sup>；e<sup>−(t−2)</sup>u(t−2) 才是将 e<sup>−t</sup>u(t) 整体向右移 2，起始右极限为 1。')}`);
+
+lesson('ct-impulse','1.4.2 连续冲激：理解面积而非高度','80–86','D · 阶跃与冲激',`
+<p>理想冲激 δ(t) 用来描述持续时间趋零、总作用量保持 1 的极限。它是广义函数，不能把它当作“只在 0 有某个巨大普通值”的曲线。箭头旁的数表示面积／权重。</p>
+${eq('∫<sub>−∞</sub><sup>∞</sup>f(t)δ(t−t₀)dt=f(t₀)','抽样点附近 f 连续时适用；更一般的分布定义作用在光滑测试函数上。')}
+<h3>为什么窄脉冲能近似冲激？</h3><p>取宽 Δ、高 1/Δ、居中于 0 的矩形 δ_Δ。它对连续 f 的积分等于 f 在小区间内的平均值；Δ→0 时平均趋于 f(0)。重要的是对外部函数的积分作用，而不是每个 t 的点值极限。</p>
+${example('有限宽度造成的误差','用居中矩形近似 δ，对 f(t)=t²+1 抽样。真实结果为 f(0)=1，有限宽结果 (1/Δ)∫<sub>−Δ/2</sub><sup>Δ/2</sup>(t²+1)dt=1+Δ²/12。Δ 减半，误差变为 1/4。')}
+${mistake('δ²(t) 在通常分布理论中没有自然定义，因此不能按普通积分给 δ 计算有限能量。离散 δ[n] 的能量却是 1。')}`, 'impulse');
+
+lesson('delta-rules','冲激的平移、缩放与抽样计算','85–88','D · 阶跃与冲激',`
+${eq('δ(at+b)=(1/|a|)δ(t+b/a)，a≠0<br>f(t)δ(t−t₀)=f(t₀)δ(t−t₀)')}
+<p>缩放同时影响位置和权重。令 s=at+b，积分变量替换给出 1/|a|，保证抽样作用的面积换算正确；绝对值确保时间反转不让单位冲激面积变负。</p>
+${example('逐步计算一个积分','I=∫<sub>−∞</sub><sup>∞</sup>(t²+1)δ(2t−4)dt。① 根在 t=2。② δ(2t−4)=δ(t−2)/2。③ 将平滑函数代 t=2，得 I=(4+1)/2=5/2。')}
+${example('有限区间和离散区别','∫₀¹ f(t)δ(t−2)dt=0，因为抽样点不在区间。对离散 δ[2n]，仅 n=0 为 1，所以 δ[2n]=δ[n]，没有 1/2 因子。δ[2n−1] 对所有整数 n 都为 0。')}
+${mistake('冲激恰在积分端点时，结果取决于采用的边界约定，不能一律说全计或计一半。若题目没有说明，先指出边界问题；本讲义自测将冲激放在区间内部。')}`);
+
+lesson('derivative','不连续信号的导数：斜率加跳变冲激','80–84、89–90','D · 阶跃与冲激',`
+<p>分段光滑信号的导数由两部分组成：每段普通斜率，以及每个跳变点的冲激。冲激权重等于“右极限减左极限”。</p>
+${eq('Dx(t)=x′<sub>普通分段</sub>(t)+∑<sub>k</sub> [x(tₖ⁺)−x(tₖ⁻)]δ(t−tₖ)<br>Du(t)=δ(t)')}
+${example('截断斜坡','x(t)=t[u(t)−u(t−2)]。在 0&lt;t&lt;2，普通导数为 1。t=0 左右都趋于 0，没有跳变冲激；t=2 从 2 跳到 0，产生 −2δ(t−2)。因此 Dx=u(t)−u(t−2)−2δ(t−2)。')}
+<h3>用积分反查导数</h3><p>上述普通斜率的面积为 2，冲激总权重为 −2，总和为 0，恰好等于 x(+∞)−x(−∞)=0。如果只算普通导数就会误以为信号永久升高到 2。</p>
+${example('连续尖角不是冲激','三角脉冲在顶点连续，但斜率从 +1 变 −1。它的一阶导数是阶梯，有跳变却没有冲激；再求一次导数时才在斜率跳变处出现冲激。')}
+<div class="example"><strong>回看课件例 1.7（第 82 页）</strong>原信号依次在 t=1 从 0 跳到 2、t=2 从 2 跳到 −1、t=4 从 −1 跳到 1。三个跳变量是 +2、−3、+2，所以 Dx=2δ(t−1)−3δ(t−2)+2δ(t−4)，对应课件选项 A。最后一个权重是 2，不能只抄右侧高度 1。</div>
+${mistake('冲激项的权重取跳变量，不是斜率，也不是右侧绝对高度。图中箭头长度只是权重的可视表示。')}`, 'derivative');
+
+lesson('models','1.5 系统建模：RC、运动与银行账户','92–97','E · 系统与互连',`
+<p>不同物理对象常有同样的数学结构。先确定输入、输出和储存状态，再写守恒关系，就能看见相同的微分／差分方程。</p>
+${eq('RC 电路：RC·dy/dt+y=x<br>带阻力运动：m·dv/dt+ρv=f<br>银行账户：y[n]=1.01y[n−1]+x[n]')}
+<ol class="steps"><li>RC：电流 (x−y)/R 等于电容电流 Cdy/dt，移项得到方程。</li><li>运动：外力 f 减阻力 ρv 等于质量乘加速度 m dv/dt。</li><li>账户：上一期余额加利息，再加入本期净存款。</li></ol>
+${example('初值决定输出的另一部分','取 RC=1、输入 x=0，方程 y′+y=0，解为 y(t)=y(0)e<sup>−t</sup>。即使输入为 0，电容已有电压仍会产生输出。因此仅给方程还不够，需给初始状态。第二章重点讨论初始静止下的 LTI 输入输出映射。')}
+${note('这里先认识模型，不需要提前使用拉普拉斯变换。第二章会用齐次解、特解和初始条件直接求解。')}`);
+
+lesson('interconnect','1.5.2 串联、并联与反馈','98–100','E · 系统与互连',`
+<p>串联是前一级输出接到后一级输入；并联是同一个输入进入多条支路，最后相加；反馈将输出的一部分返回输入端。先标出中间量，才能写清连接关系。</p>
+${eq('串联：v=S₁{x}，y=S₂{v}<br>并联：y=S₁{x}+S₂{x}<br>负反馈：e=x−F{y}，y=G{e}')}
+${example('负反馈的最小例子','若 G 是乘 3，F 是乘 1/2，则 y=3(x−y/2)，所以 (1+3/2)y=3x，y=1.2x。这里代数方程有唯一解。若改成正反馈且环路增益恰为 1，可能没有唯一解，不能随意相除。')}
+${example('一般系统串联不交换','S₁{x}=x+1，S₂{x}=x²。先 S₁ 后 S₂ 得 (x+1)²；交换后得 x²+1。x=1 时分别为 4、2。第二章的 LTI 卷积交换律有特定前提，不能推广到所有系统。')}
+${mistake('框图上的加减号是方程的一部分。反馈连线不是简单地“再加一个输出”，要判断反馈从哪里取、加到哪里、正号还是负号。')}`);
+
+lesson('memory','1.6.1 记忆性：只看同一时刻吗？','101–102','F · 六种系统性质',`
+<p>无记忆系统在时刻 t 的输出只依赖同一时刻的输入 x(t)。若还要使用任何其他时刻的输入，哪怕是未来，也称有记忆。系统可以显式依赖时间，而仍然无记忆。</p>
+${eq('无记忆示例：y(t)=x²(t)，y(t)=t x(t)<br>有记忆示例：y[n]=x[n−1]，y(t)=∫<sub>t−1</sub><sup>t</sup>x(τ)dτ')}
+${example('用两条输入证明有记忆','系统 y[n]=x[n]+x[n−1]。选择两条输入在 n=0 都为 0，但第一条 x[−1]=1，第二条 x[−1]=0。当前输入相同，输出 y[0] 却分别为 1、0，所以输出需要历史信息。')}
+<h3>导数为什么也有记忆？</h3><p>求 dx/dt 需要邻域变化，而仅知道一点 x(t₀) 不够。例如两条曲线在 t₀ 都过 0，一条水平、一条斜率为 1，导数不同。在适当可微输入域上，导数也可由左侧极限决定，故“有记忆”不等于“非因果”。</p>
+${mistake('“有公式”并不等于无记忆；“未来输入”也算其他时刻。y(t)=x(t+1) 同时有记忆、非因果。')}`);
+
+lesson('inverse','1.6.2 可逆性：信息是否丢失？','103–105','F · 六种系统性质',`
+<p>如果两个不同的允许输入不会产生同一个输出，系统就是可逆的。寻找逆系统可以直接证明可逆；寻找一对“输入不同、输出相同”的反例可以证明不可逆。</p>
+${eq('S⁻¹{S{x}}=x（在规定输入集合内）')}
+${example('平方的答案取决于输入范围','在全体实信号上，x₁(t)=1、x₂(t)=−1 经过平方都输出 1，所以不可逆。若明确只允许非负实输入，则逆映射是 x=√y。定义输入域是答案的一部分。')}
+${example('增益、延迟和抽取','y=3x 的逆为 x=y/3；y(t)=x(t−2) 的逆需 y(t+2)，数学上可逆，但这个逆系统非因果。y[n]=x[2n] 丢掉所有奇数位置，在任意序列集合上不可逆。')}
+<h3>微分与积分的条件</h3><p>只给导数会丢失常数：x(t) 和 x(t)+C 导数相同。若同时固定一个初值，就可用积分恢复。不能只凭“微分和积分互逆”的口号忽略输入域与边界条件。</p>
+${mistake('可逆不自动意味着逆系统稳定、因果或易于实现。它首先是输入输出是否一一对应的数学性质。')}`);
+
+lesson('causality','1.6.3 因果性：当前是否依赖未来？','106–107','F · 六种系统性质',`
+<p>若任意两条输入在 t≤t₀ 上完全相同，系统在 t₀ 的输出也必须相同，系统才是因果的。必须对所有 t₀ 成立，不能只检查正时间或一个特殊输入。</p>
+${eq('因果：y[n]=x[n]−x[n−1]<br>非因果：y[n]=x[n]−x[n+1]')}
+${example('时间反转为什么非因果','y(t)=x(−t)。在 t=−1 时要访问 x(1)，这是相对 −1 的未来。虽然在正时间 t&gt;0 时它读取过去，仍不能满足全时间因果性。')}
+${example('显式出现 t+1 不一定非因果','y(t)=x(t)cos(t+1) 只读取当前输入 x(t)，所以因果；cos(t+1) 是已知的时变系数，不是未来输入。判断应看 x 的自变量，而不是式中是否出现加号。')}
+${note('无记忆系统必然因果；因果系统可以有记忆，例如纯延迟。离线图像处理、完整录音的后期处理可以使用非因果规则，数学分类并不等于“无法计算”。')}`);
+
+lesson('stability','1.6.4 BIBO 稳定：所有有界输入都要过关','108–110','F · 六种系统性质',`
+<p>BIBO 指 bounded-input bounded-output。任意输入只要存在一个全时间有限上界 M，输出也必须存在有限上界 B。B 可以依赖 M 与系统，但不能随着 t 或 n 无界增长。</p>
+${example('证明稳定：给统一上界','y(t)=x²(t)。若 |x(t)|≤M，则 |y(t)|≤M²，稳定。y[n]=x[n]+2x[n−1] 满足 |y[n]|≤3M，也稳定。稳定并不要求线性。')}
+${example('证明不稳定：找一个有界反例','y(t)=t x(t)，取 x=1，输入有界而 y=t 无界。累加器 y[n]=Σ<sub>k=−∞</sub><sup>n</sup>x[k]，取 x=u[n]，得到 (n+1)u[n]，也不稳定。')}
+<h3>有界不等于小于 1</h3><p>sin t、常量 100、所有幅度不超过 10 的任意波形都算有界。输出可以放大一千倍，只要仍有有限全时间上界，就满足 BIBO。</p>
+${mistake('仿真 100 个点未发散不是稳定证明。某些不稳定系统对某些输入仍有界；稳定要求“所有有界输入”，不稳定只需“一条反例”。')}`);
+
+lesson('time-invariance','1.6.5 时不变性：比较两条路径','111–114','F · 六种系统性质',`
+<p>系统时不变是指：输入推迟 t₀，输出只相应推迟 t₀，处理规则不会因为开始时刻变了而改变。必须比较下面两条路径，而不是凭公式外观判断。</p>
+${eq('路径 A：S{x(t−t₀)}<br>路径 B：先 y(t)=S{x(t)}，再取 y(t−t₀)<br>任意 x、t₀ 下 A=B ⇒ 时不变')}
+${example('y(t)=t x(t)','先移输入得到 t x(t−t₀)；先系统后移输出得到 (t−t₀)x(t−t₀)。一般不同，所以时变。注意第一条路径中的系统系数 t 仍然是当前时刻，不能偷偷改成 t−t₀。')}
+${example('没有外部 t 也可能时变','S{x}(t)=x(2t)。令 x_s(t)=x(t−t₀)，则 S{x_s}=x(2t−t₀)；而 y(t−t₀)=x(2t−2t₀)。一般不等，时变。相比之下 x(t−3) 的两条路径都是 x(t−t₀−3)，时不变。')}
+${mistake('某个输入下曲线碰巧重合，不能证明时不变。下面的图给出具体反例帮助理解，最终证明仍来自含任意 x 的代数推导。')}`, 'time-invariance');
+
+lesson('linearity','1.6.6 线性：叠加与齐次','115–118、120','F · 六种系统性质',`
+${eq('S{a x₁+b x₂}=aS{x₁}+bS{x₂}','a、b 为允许标量域内任意常数。复信号系统若要求复线性，则需对复标量也成立。')}
+<p>线性包括可加性和齐次性，意味着混合输入的输出可以由各自响应同样混合得到。零输入零输出是必要条件，但不是充分条件。</p>
+${example('平方不是线性','取 x₁=x₂=1，a=b=1。系统处理和：(1+1)²=4；分别处理再加：1²+1²=2。不等，所以非线性。它虽然满足 S{0}=0，仍无法通过叠加测试。')}
+${example('线性与时不变互相独立','S{x}=t x 满足 t(ax₁+bx₂)=a tx₁+b tx₂，因此线性，但上一节已证它时变。S{x}=x² 是非线性，却时不变。S{x}=x+1 因零输入输出 1，是仿射映射而非线性。')}
+<h3>复线性的细节</h3><p>共轭系统 S{x}=x* 对实数系数满足叠加，但对 a=j：S{jx}=−jx*≠jS{x}，所以不是复线性。若课程把输入限定为实信号，则需要按实标量域判断。</p>
+${mistake('“次数为一次”只能作提示，不能代替定义。x(2t)、积分与延迟都可为线性；带固定非零初始状态的输入输出映射通常不线性。')}`, 'linearity');
+
+lesson('workflow','综合判断：把六种性质分开证明','119–121','F · 六种系统性质',`
+<p>不要让一个标签替代另一个标签。按“读取哪些时刻 → 是否丢信息 → 是否有界 → 平移测试 → 叠加测试”的顺序，可以减少混淆。</p>
+${example('完整例题：y[n]=x[3n−1]','<ol class="steps"><li>线性：将 ax₁+bx₂ 代入，直接得到 ax₁[3n−1]+bx₂[3n−1]。</li><li>时变：延迟输入 n₀ 后为 x[3n−1−n₀]；延迟输出为 x[3n−1−3n₀]，一般不同。</li><li>有记忆：访问 3n−1，一般不等于当前 n。</li><li>非因果：例如 n=1 需要 x[2]。</li><li>稳定：若 |x[k]|≤M，则所取任何位置也不超过 M。</li><li>不可逆：只观察原索引模 3 余 2 的位置，其他位置的信息丢失。</li></ol>')}
+${example('LTI 组合输入','如果已知某个 LTI 系统对 x(t) 的输出为 y(t)，则输入 2x(t−1)−x(t+2) 的输出是 2y(t−1)−y(t+2)。这里同时用到线性和时不变；缺少任意一个条件就不能直接推。')}
+<div class="note"><strong>进入第二章前，试着口头回答</strong>为什么 x(2t−1) 要追踪坐标？为什么离散正弦未必周期？为什么冲激看面积？什么条件让“一个冲激的响应”足以描述整个系统？能回答这些，就具备推导卷积的基础。</div>`);
+
+const CourseQuestions=[
+{title:'能量积分',q:'x(t)=2e<sup>−3t</sup>u(t)。求总能量 E。',answer:2/3,unit:'',solution:'|x|²=4e<sup>−6t</sup>u(t)。E=4∫₀∞e<sup>−6t</sup>dt=4/6=2/3，P=0。先取模平方，再确定积分区间。'},
+{title:'离散能量',q:'x[n]=(−1/2)ⁿu[n]。求总能量。',answer:4/3,unit:'',solution:'平方后符号交替消失，E=Σ₀∞(1/4)ⁿ=1/(1−1/4)=4/3。原序列并不周期。'},
+{title:'变换的端点',q:'x(t) 支持在 [1,3]。y(t)=x(−2t+1) 的非零区间左端是多少？',answer:-1,unit:'s',solution:'1≤−2t+1≤3 ⇒ −1≤t≤0。原右端 3 映射为 −1，原左端 1 映射为 0。负系数使顺序反转。'},
+{title:'连续周期',q:'x(t)=cos(4t)+sin(6t)。T₀/π 等于多少？',answer:1,unit:'',solution:'共同角频率基数为 2 rad/s，要求 4T、6T 都为 2π 的整数倍，最小 T=π。不是把两周期直接相加。'},
+{title:'离散周期',q:'e<sup>j5πn/6</sup> 的基本周期 N₀ 是多少？',answer:12,unit:'样本',solution:'ω/(2π)=5/12 已最简，因此最小正整数 N=12。2π/ω=12/5 不是整数，不能把它直接当离散周期。'},
+{title:'功率边界情形',q:'x[n]=2cos(πn)。平均功率是多少？',answer:4,unit:'',solution:'x[n]=2(−1)ⁿ，所以每一点平方都是 4，P=4。在 π 频率处不能套连续余弦 A²/2。'},
+{title:'奇偶分解',q:'已知 x(2)=5、x(−2)=1。求奇分量 x_o(2)。',answer:2,unit:'',solution:'x_o(2)=(5−1)/2=2，偶分量 x_e(2)=3；二者和为 5。x_o(−2)=−2。'},
+{title:'冲激缩放抽样',q:'∫<sub>−∞</sub><sup>∞</sup>(t²+1)δ(3t−6)dt 等于多少？',answer:5/3,unit:'',solution:'δ(3t−6)=δ(t−2)/3，再抽样得到 (2²+1)/3=5/3。漏掉 1/3 会得到错误结果 5。'},
+{title:'阶跃端点',q:'u[n−2]−u[n−7] 一共有多少个非零样本？',answer:5,unit:'个',solution:'非零位置 n=2,3,4,5,6，共 7−2=5 个。n=7 时两个阶跃均为 1，已经相减为 0。'},
+{title:'跳变冲激',q:'x(t)=t[u(t)−u(t−3)]。其导数在 t=3 的冲激权重是多少？',answer:-3,unit:'',solution:'左极限 3、右极限 0，跳变量 0−3=−3。因此 Dx=u(t)−u(t−3)−3δ(t−3)。'},
+{title:'时不变的两条路径',q:'S{x}(t)=t x(t)，x(t)=1，t₀=2。在 t=3，两条路径 A=S{x(t−2)} 与 B=y(t−2) 的 A−B 是多少？',answer:2,unit:'',solution:'A=3，B=(3−2)×1=1，差为 2，给出了时变反例。该系统仍是线性、因果、无记忆，但 BIBO 不稳定。'},
+{title:'非线性反例',q:'S{x}=x²，x₁=1、x₂=2，a=b=1。S{x₁+x₂}−S{x₁}−S{x₂} 等于多少？',answer:4,unit:'',solution:'(1+2)²−1²−2²=9−1−4=4，交叉项未消失，所以不线性。平方系统在实信号上依然稳定、时不变、因果、无记忆。'}
+];
+document.getElementById('coverage').innerHTML='<ul><li>1.1 信号类型、能量与功率：第 11–25 页 → A 组。</li><li>1.2 时间变换、周期、奇偶：第 26–44 页 → B 组。</li><li>1.3 连续／离散指数与正弦：第 45–68 页 → C 组。</li><li>1.4 阶跃、冲激、抽样与导数：第 69–91 页 → D 组。</li><li>1.5 系统模型与互连：第 92–100 页 → E 组。</li><li>1.6 系统六种性质与 LTI：第 101–121 页 → F 组。</li></ul>';
+</script><script>'use strict';
+const CourseVisuals=(()=>{
+const M=CourseMath,B='#216b99',O='#cb7136',G='#39846b',INK='#244853',GRID='#e1e9e5',widgets=[];
+const range=(key,label,min,max,step,value)=>({key,label,min,max,step,value});
+const select=(key,label,options,value)=>({key,label,options,value});
+const D={
+ 'sampling':{title:'采样时刻与原连续波形',guide:'保持原信号 2 Hz，改变采样频率。降低到 4 Hz 或 3 Hz 时，观察样本对原波形的区分能力。',controls:[range('fs','采样率 f_s / Hz',3,16,1,8),range('t','观察时间 / s',0,2,.02,.5)],sweep:'t',legend:'蓝：cos(4πt)；橙：采样点；绿：当前时间',alt:'连续余弦曲线与离散采样茎状图'},
+ 'energy':{title:'扩大窗口，看能量与平均功率',guide:'把 T 从 1 增大到 20，比较 E_T 与 P_T。图形只画当前窗口，结论由解析式给出。',controls:[select('kind','信号',[['exp','e^(−t)u(t)'],['sine','sin t'],['step','u(t)'],['ramp','t']],'exp'),range('T','半窗口 T',1,20,.2,3)],sweep:'T',legend:'蓝：x(t)；橙色填充：|x(t)|²；数值为解析积分',alt:'信号及其平方在对称观察窗口内的面积'},
+ 'transform':{title:'把原位置 s 映射到 (s−b)/a',guide:'先令 a=1 调 b，再取负 a 看翻转。标记点是原峰值 s=1。',controls:[select('a','时间系数 a',[[-2,'−2'],[-1,'−1'],[-.5,'−0.5'],[.5,'0.5'],[1,'1'],[2,'2']],1),range('b','平移参数 b',-2,2,.05,0)],sweep:'b',legend:'蓝：x(t)；橙：x(at+b)；绿点：原峰值的新位置',alt:'原信号与经过反转缩放平移后的信号'},
+ 'dt-transform':{title:'整数索引上的抽取与插零',guide:'原样本位置为 −1、0、1、2。比较抽取丢掉哪些索引，插零把索引扩展到哪里。',controls:[select('mode','操作',[['decimate','抽取 x[Mn]'],['expand','插零 L 倍']],'decimate'),range('factor','整数倍数',1,4,1,2)],sweep:'factor',legend:'上蓝：原样本；下橙：变换后样本；零值也画点',alt:'带有正负索引的原序列和抽取或插零序列'},
+ 'odd-even':{title:'右边指数拆成一偶一奇',guide:'拖动观察位置，读出 x_e 与 x_o 相加如何恢复原信号；负半轴两项抵消。',controls:[range('t','观察位置 t',-3,3,.05,1)],sweep:'t',legend:'蓝：x；橙：偶分量；绿：奇分量；x(0) 按 1/2 取值',alt:'指数信号的奇偶分量与原信号对照'},
+ 'phasor':{title:'旋转向量与指数包络',guide:'r=0 看圆周；r<0 看衰减。Ω 改为负数会反向旋转。播放控制时间 t。',controls:[range('r','指数包络 r',-.5,.3,.1,0),range('omega','角频率 Ω',-4,4,.5,2),range('t','时间 t / s',0,5,.02,1)],sweep:'t',legend:'左：复平面向量与轨迹；右蓝：实部，橙：虚部',alt:'复指数在复平面上的旋转轨迹及其实部虚部'},
+ 'dt-frequency':{title:'离散频率：多转整圈仍是同一序列',guide:'ω=2πp/q。改变 p、q 看基本周期；改变 m，橙点仍与蓝点重合。上下两行分别显示实部和虚部。',controls:[range('p','分子 p',0,8,1,3),range('q','分母 q',1,12,1,8),range('m','额外整圈 m',-2,2,1,1)],sweep:'p',legend:'蓝：e^(jωn)；橙圈：e^[j(ω+2πm)n]，实虚部均相同',alt:'两个等价离散频率的复指数样本'},
+ 'impulse':{title:'宽度变小，面积保持 1',guide:'矩形宽 Δ、高 1/Δ。先观察高度，再看对 f(t)=1+t² 的积分误差如何变化。',controls:[range('d','脉冲宽度 Δ',.1,2,.05,1)],sweep:'d',legend:'蓝：单位面积矩形；橙：f(t)=1+t²；箭头为理想 δ 的位置',alt:'单位面积窄脉冲与测试函数，展示冲激近似'},
+ 'derivative':{title:'斜坡被截断：不要漏掉末端冲激',guide:'改变截止时间 T，跳变权重为 −T。图中冲激箭头表示权重，并不是有限高度的函数。',controls:[range('T','截止时刻 T',1,3,.1,2)],sweep:'T',legend:'上蓝：截断斜坡；下橙：普通斜率；绿箭头：跳变冲激',alt:'截断斜坡及其包含负冲激的广义导数'},
+ 'time-invariance':{title:'对照时不变性的两条路径',guide:'同一个非对称三角输入。先选纯延迟看重合，再选乘 t 或 x(2t) 看差异；t₀=0 时各系统都会碰巧重合。',controls:[select('type','系统',[['delay','S{x}=x(t−1)'],['gain','S{x}=t·x(t)'],['scale','S{x}=x(2t)']],'scale'),range('shift','输入延迟 t₀',0,2,.05,1)],sweep:'shift',legend:'蓝：先移输入再系统；橙虚线：先系统再移输出',alt:'系统前平移与系统后平移两条路径的输出比较'},
+ 'linearity':{title:'系统处理和，还是分别处理再相加？',guide:'固定 x₁=sin t、x₂=cos t。改变 a、b 观察两条路径。一个非零差异即可否定线性。',controls:[select('type','系统',[['linear','S{x}=2x'],['square','S{x}=x²'],['affine','S{x}=x+1']],'square'),range('a','系数 a',-2,2,.1,1),range('b','系数 b',-2,2,.1,1)],sweep:'a',legend:'蓝：S{ax₁+bx₂}；橙虚线：aS{x₁}+bS{x₂}',alt:'线性叠加测试两条路径的曲线'},
+ 'decompose':{title:'每个输入样本带来一份响应',guide:'依次加入 k=0、1、2 的贡献，观察输出逐步累加；最后 n=2 的两份贡献恰好抵消。',controls:[range('count','已加入输入样本数',1,3,1,1)],sweep:'count',legend:'蓝/橙/绿：各样本贡献；下蓝：当前累加；下橙圈：完整输出',alt:'移位冲激响应逐项叠加形成卷积输出'},
+ 'dt-convolution':{title:'卷积滑动实验：当前 y[n] 怎样算出',guide:'从 n=−1 播放到 4。上图移动的是翻转后的 h[n−k]；中图乘积项相加得到下图的当前输出。',controls:[range('n','输出索引 n',-1,4,1,1)],sweep:'n',legend:'上蓝 x[k] / 橙 h[n−k]；中绿：乘积；下蓝：完整输出 / 橙：当前值',alt:'离散卷积的翻转平移、逐点乘积、求和三层图'},
+ 'geometric':{title:'累加指数，观察几何级数',guide:'α 可取负数或 1。增加 n，看当前纳入哪些项，α=1 时不再套分母公式。',controls:[range('alpha','指数底数 α',-.8,1,.1,.5),range('n','累加上限 n',0,15,1,4)],sweep:'n',legend:'上蓝：α^k（已加入）；上灰：尚未加入；下橙：累计和',alt:'离散几何级数逐项累加'},
+ 'ct-convolution':{title:'两个矩形滑动：重叠长度就是卷积',guide:'先保持 A=2、B=3，播放 t。重叠区域先增长、保持，再缩小；改 A=B 观察三角形。',controls:[range('A','第一矩形宽 A',.5,3,.25,2),range('B','第二矩形宽 B',.5,3,.25,3),range('t','输出时刻 t',-1,7,.05,1.5)],sweep:'t',legend:'上蓝：x(τ)；上橙：h(t−τ)；绿色：重叠；下蓝：y(t)',alt:'连续矩形卷积的移动重叠区间及输出梯形'},
+ 'ct-exponential':{title:'指数卷积：把当前面积积起来',guide:'b=0 是指数与阶跃卷积；a=b 时结果为 t·exp(−at)。拖动 t 观察积分区间 [0,t]。',controls:[range('a','输入衰减 a',.5,3,.25,1),range('b','响应衰减 b',0,3,.25,2),range('t','输出时刻 t',0,5,.05,1)],sweep:'t',legend:'上蓝：x(τ)h(t−τ)；阴影：积分面积；下橙：完整输出',alt:'两个因果指数的卷积被积函数和输出'},
+ 'stability':{title:'有限仿真与稳定条件一起看',guide:'先试 α=.5，再试 1 和 −1。α=−1 时阶跃输出不增长，切换交替输入会发现反例。',controls:[range('alpha','递推系数 α',-1.2,1.2,.1,.5),select('input','有界输入',[['step','u[n]'],['alternating','(−1)^n u[n]']],'step'),range('N','观察末点 N',5,30,1,15)],sweep:'N',legend:'上蓝：h[n]=α^n；下橙：输出，初态零',alt:'一阶递推系统的冲激响应和有界输入输出'},
+ 'step-response':{title:'冲激响应的面积变成阶跃响应',guide:'拖动 t 看 h 的累计面积；改变 τ 后观察上升快慢。标记 t=τ 时输出约 0.632。',controls:[range('tau','时间常数 τ',.25,2,.05,1),range('t','观察时刻 t',0,6,.05,1)],sweep:'t',legend:'上蓝：h(t)；阴影：已积面积；下橙：s(t)',alt:'一阶低通的冲激响应积分与阶跃响应'},
+ 'ode':{title:'齐次项与特解相加满足初值',guide:'方程 y′+ay=e^(bt)，y(0)=0。设 b=−a 看共振形式 t·exp(−at)；数值显示当前 y。',controls:[range('a','系数 a',.5,3,.5,2),range('b','输入指数 b',-3,1,.5,0),range('t','观察时刻 t',0,4,.05,1)],sweep:'t',legend:'蓝：总响应；橙虚线：非共振时的特解；绿虚线：对应齐次项',alt:'一阶微分方程零状态响应及齐次特解分量'},
+ 'recurrence':{title:'逐拍递推：初始状态也会传下来',guide:'每个 y[n] 由 αy[n−1]+x[n] 构成。改变初值，看总响应与零状态响应的差。',controls:[range('alpha','递推系数 α',-.9,1.1,.1,.5),range('initial','初值 y[−1]',-2,2,.25,0),select('input','输入',[['step','单位阶跃'],['impulse','单位冲激']],'step'),range('n','当前 n',0,15,1,3)],sweep:'n',legend:'蓝：总响应；橙虚线／圈：零状态；绿：当前点',alt:'差分方程的总响应和零状态响应逐样本比较'},
+ 'singularity':{title:'窄脉冲通过系统后，逐渐接近 h',guide:'h(t)=e^(−t)u(t)，输入为 [0,Δ] 上高度 1/Δ 的矩形。改变 Δ，比较实际输出与理想冲激响应。',controls:[range('d','输入宽度 Δ',.05,1.5,.05,.5)],sweep:'d',legend:'上蓝：单位面积输入；下蓝：有限宽输出；下橙：理想 h',alt:'单位面积窄脉冲经过因果指数系统的响应'}
+};
+function make(id){const d=D[id];if(!d)throw Error('未知实验 '+id);const box=document.createElement('div');box.className='lab';box.dataset.lab=id;box.innerHTML=`<div class="lab-head"><strong>${d.title}</strong><p>${d.guide}</p></div><div class="legend">${d.legend}</div><canvas role="img" aria-label="${d.alt}"></canvas><div class="controls"></div><p class="lab-status" aria-live="polite"></p>`;const state={},controls=box.querySelector('.controls'),fields={};
+ for(const spec of d.controls){state[spec.key]=spec.value;const label=document.createElement('label');label.className='control';label.textContent=spec.label+' ';const output=document.createElement('output');label.append(output);const input=document.createElement(spec.options?'select':'input');input.id=id+'-'+spec.key;input.dataset.key=spec.key;input.setAttribute('aria-label',spec.label);if(spec.options){for(const [value,text] of spec.options){const op=document.createElement('option');op.value=value;op.textContent=text;input.append(op);}}else{input.type='range';input.min=spec.min;input.max=spec.max;input.step=spec.step;}input.value=spec.value;label.append(input);controls.append(label);fields[spec.key]={input,output,spec};input.addEventListener('input',()=>{state[spec.key]=spec.options&&typeof spec.value==='string'?input.value:Number(input.value);sync();draw(w);});}
+ const play=document.createElement('button');play.className='play';play.textContent='播放演示';play.type='button';const reset=document.createElement('button');reset.className='reset';reset.type='button';reset.textContent='重置参数';controls.append(play,reset);
+ const w={id,box,state,fields,playing:false,last:0,sync,play};widgets.push(w);function sync(){for(const [key,f] of Object.entries(fields)){f.input.value=state[key];f.output.textContent=f.spec.options?'':M.fmt(state[key],3);}}sync();play.addEventListener('click',()=>{w.playing=!w.playing;w.last=0;play.textContent=w.playing?'暂停演示':'播放演示';});reset.addEventListener('click',()=>{for(const s of d.controls)state[s.key]=s.value;w.playing=false;play.textContent='播放演示';sync();draw(w);});return box;}
+function setup(w){const cv=w.box.querySelector('canvas'),r=cv.getBoundingClientRect(),ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(r.width*ratio);cv.height=Math.round(r.height*ratio);const c=cv.getContext('2d');c.scale(ratio,ratio);c.fillStyle='#fff';c.fillRect(0,0,r.width,r.height);c.font='11px "Segoe UI","Microsoft YaHei",sans-serif';return{c,w:r.width,h:r.height};}
+function axes(p,row,total,xmin,xmax,ymin,ymax,title,xlabel='t'){const c=p.c,top=row*p.h/total,L=43,R=p.w-18,T=top+27,Bt=(row+1)*p.h/total-30;const X=x=>L+(x-xmin)/(xmax-xmin)*(R-L),Y=y=>Bt-(y-ymin)/(ymax-ymin)*(Bt-T);c.strokeStyle=GRID;c.lineWidth=1;c.textAlign='center';c.fillStyle='#71858a';let ticks=[];if(xlabel==='n'||xlabel==='k'){const gap=Math.max(1,Math.ceil((xmax-xmin)/6));for(let x=Math.ceil(xmin/gap)*gap;x<=xmax;x+=gap)ticks.push(x);}else ticks=Array.from({length:5},(_,i)=>xmin+(xmax-xmin)*i/4);for(const x of ticks){c.beginPath();c.moveTo(X(x),T);c.lineTo(X(x),Bt);c.stroke();c.fillText(M.fmt(x,1),X(x),Bt+15);}for(let i=0;i<=2;i++){const y=ymin+(ymax-ymin)*i/2;c.beginPath();c.moveTo(L,Y(y));c.lineTo(R,Y(y));c.stroke();c.textAlign='right';c.fillText(M.fmt(y,2),L-5,Y(y)+4);}if(ymin<=0&&ymax>=0){c.strokeStyle='#a7b9b4';c.beginPath();c.moveTo(L,Y(0));c.lineTo(R,Y(0));c.stroke();}c.textAlign='left';c.fillStyle=INK;c.fillText(title,L,top+16);c.textAlign='right';c.fillText(xlabel,R,Bt+28);return{X,Y,L,R,T,B:Bt,xmin,xmax,ymin,ymax};}
+function line(p,a,fn,color=B,dash=[]){const c=p.c;c.save();c.beginPath();c.rect(a.L,a.T,a.R-a.L,a.B-a.T);c.clip();c.strokeStyle=color;c.lineWidth=2;c.setLineDash(dash);c.beginPath();for(let i=0;i<=500;i++){const x=a.xmin+(a.xmax-a.xmin)*i/500,y=fn(x);if(!Number.isFinite(y))continue;i?c.lineTo(a.X(x),a.Y(y)):c.moveTo(a.X(x),a.Y(y));}c.stroke();c.restore();}
+function stem(p,a,x,y,color=B,offset=0,ring=false){if(x<a.xmin||x>a.xmax)return;const c=p.c;c.strokeStyle=color;c.fillStyle=color;c.lineWidth=1.5;c.beginPath();c.moveTo(a.X(x)+offset,a.Y(0));c.lineTo(a.X(x)+offset,a.Y(y));c.stroke();c.beginPath();c.arc(a.X(x)+offset,a.Y(y),ring?4:2.5,0,M.TAU);ring?c.stroke():c.fill();}
+function dot(p,a,x,y,color=G){if(x<a.xmin||x>a.xmax)return;const c=p.c;c.fillStyle=color;c.beginPath();c.arc(a.X(x),a.Y(y),4,0,M.TAU);c.fill();}
+function fill(p,a,fn,l,u,color='#216b9922'){l=Math.max(l,a.xmin);u=Math.min(u,a.xmax);if(u<=l)return;const c=p.c;c.save();c.beginPath();c.rect(a.L,a.T,a.R-a.L,a.B-a.T);c.clip();c.fillStyle=color;c.beginPath();c.moveTo(a.X(l),a.Y(0));for(let i=0;i<=200;i++){const x=l+(u-l)*i/200;c.lineTo(a.X(x),a.Y(fn(x)));}c.lineTo(a.X(u),a.Y(0));c.closePath();c.fill();c.restore();}
+function arrow(p,a,x,y,color=G){stem(p,a,x,y,color);const c=p.c,px=a.X(x),py=a.Y(y),sign=y>=0?1:-1;c.fillStyle=color;c.beginPath();c.moveTo(px,py);c.lineTo(px-5,py+sign*9);c.lineTo(px+5,py+sign*9);c.closePath();c.fill();}
+function draw(w){if(!w.box.isConnected||w.box.closest('[hidden]'))return;const p=setup(w),s=w.state,f=M.fmt;let msg='',a,b;
+if(w.id==='sampling'){a=axes(p,0,1,0,2,-1.35,1.35,'连续信号 f=2 Hz 与采样位置','t / s');line(p,a,t=>Math.cos(4*Math.PI*t));for(let n=0;n<=2*s.fs;n++)stem(p,a,n/s.fs,Math.cos(4*Math.PI*n/s.fs),O);dot(p,a,s.t,Math.cos(4*Math.PI*s.t));msg=`T_s=${f(1/s.fs)} s，ω=4π/${s.fs} rad/sample；当前 x(${f(s.t)})=${f(Math.cos(4*Math.PI*s.t))}。改变采样率不会改变蓝色原信号。`;}
+else if(w.id==='energy'){const fun=t=>s.kind==='exp'?(t>=0?Math.exp(-t):0):s.kind==='step'?(t>=0?1:0):s.kind==='sine'?Math.sin(t):t;const max=s.kind==='ramp'?s.T:1;a=axes(p,0,2,-s.T,s.T,-max*1.15,max*1.15,'信号 x(t)');line(p,a,fun);b=axes(p,1,2,-s.T,s.T,0,max*max*1.15,'平方幅度与窗口能量');fill(p,b,t=>fun(t)**2,-s.T,s.T,'#cb713633');line(p,b,t=>fun(t)**2,O);const E=M.finiteEnergy(s.kind,s.T);msg=`E_T=${f(E)}；P_T=E_T/(2T)=${f(E/(2*s.T))}。${{exp:'T→∞：E→1/2、P→0，能量信号。',sine:'T→∞：E 无穷、P→1/2，功率信号。',step:'对称窗口中 P_T 始终为 1/2。',ramp:'P_T=T²/3，无界增长，两者都不是。'}[s.kind]}`;}
+else if(w.id==='transform'){a=axes(p,0,1,-10,10,-.15,1.3,'原波形与 x(at+b)');line(p,a,M.base);line(p,a,t=>M.base(s.a*t+s.b),O);dot(p,a,M.transform(1,s.a,s.b),1);const x0=M.transform(0,s.a,s.b),x3=M.transform(3,s.a,s.b);msg=`非零区间 [${f(Math.min(x0,x3))}, ${f(Math.max(x0,x3))}]；峰位置 (1−b)/a=${f(M.transform(1,s.a,s.b))}。${s.a<0?'a<0：同时反转。':'a>0：顺序保留。'}`;}
+else if(w.id==='dt-transform'){a=axes(p,0,2,-5,9,-1.5,3.5,'原序列 x[n]','n');b=axes(p,1,2,-5,9,-1.5,3.5,s.mode==='decimate'?'抽取后的序列':'插零后的序列','n');let out=[];for(let n=-4;n<=8;n++){stem(p,a,n,M.seq(n));const v=s.mode==='decimate'?M.seq(s.factor*n):(n%s.factor===0?M.seq(n/s.factor):0);stem(p,b,n,v,O);if(v)out.push(`y[${n}]=${v}`);}msg=out.join('，')+'。'+(s.mode==='decimate'?'仅访问原索引为倍数的位置，其他样本被丢弃。':'其他整数位置补 0；这不是插值。');}
+else if(w.id==='odd-even'){const e=t=>.5*Math.exp(-Math.abs(t)),o=t=>Math.sign(t)*e(t),x=t=>t<0?0:t===0?.5:Math.exp(-t);a=axes(p,0,1,-3,3,-.65,1.2,'原信号 = 偶分量 + 奇分量');line(p,a,x);line(p,a,e,O);line(p,a,o,G);dot(p,a,s.t,x(s.t));msg=`t=${f(s.t)}：x_e=${f(e(s.t))}，x_o=${f(o(s.t))}，和=${f(e(s.t)+o(s.t))}=x(t)。`;}
+else if(w.id==='phasor'){const radius=Math.exp(Math.max(0,s.r*5))*1.15,aspect=(p.w-61)/(p.h/2-57);a=axes(p,0,2,-radius*aspect,radius*aspect,-radius,radius,'复平面轨迹（等比例坐标）','Re');const c=p.c;c.strokeStyle='#a4c6bb';c.beginPath();for(let i=0;i<=300;i++){const t=5*i/300,x=Math.exp(s.r*t)*Math.cos(s.omega*t),y=Math.exp(s.r*t)*Math.sin(s.omega*t);i?c.lineTo(a.X(x),a.Y(y)):c.moveTo(a.X(x),a.Y(y));}c.stroke();const re=Math.exp(s.r*s.t)*Math.cos(s.omega*s.t),im=Math.exp(s.r*s.t)*Math.sin(s.omega*s.t);c.strokeStyle=B;c.lineWidth=2;c.beginPath();c.moveTo(a.X(0),a.Y(0));c.lineTo(a.X(re),a.Y(im));c.stroke();dot(p,a,re,im);b=axes(p,1,2,0,5,a.ymin,a.ymax,'实部与虚部','t / s');line(p,b,t=>Math.exp(s.r*t)*Math.cos(s.omega*t));line(p,b,t=>Math.exp(s.r*t)*Math.sin(s.omega*t),O);dot(p,b,s.t,re);msg=`t=${f(s.t)}，模=e^(rt)=${f(Math.exp(s.r*s.t))}，Re=${f(re)}，Im=${f(im)}。Ω 的符号决定旋转方向。`;}
+else if(w.id==='dt-frequency'){const om=M.TAU*s.p/s.q;a=axes(p,0,2,0,24,-1.3,1.3,'实部：cos(ωn)','n');b=axes(p,1,2,0,24,-1.3,1.3,'虚部：sin(ωn)','n');let err=0;for(let n=0;n<=24;n++){const re=Math.cos(om*n),im=Math.sin(om*n),re2=Math.cos((om+M.TAU*s.m)*n),im2=Math.sin((om+M.TAU*s.m)*n);stem(p,a,n,re,B);stem(p,a,n,re2,O,0,true);stem(p,b,n,im,B);stem(p,b,n,im2,O,0,true);err=Math.max(err,Math.hypot(re-re2,im-im2));}msg=`ω/(2π)=${s.p}/${s.q}，最小周期 N₀=${M.period(s.p,s.q)}；两组复样本最大差 ${err<1e-10?'<10⁻¹⁰':f(err)}。此控件使用有理频率；无理频率的不周期性请看正文证明。`;}
+else if(w.id==='impulse'){a=axes(p,0,2,-1.5,1.5,0,Math.max(1.3,1.15/s.d),'单位面积矩形，高度随 Δ 改变');line(p,a,t=>Math.abs(t)<s.d/2?1/s.d:0);arrow(p,a,0,1,G);b=axes(p,1,2,-1.5,1.5,0,3.5,'测试函数 f(t)=1+t²');line(p,b,t=>1+t*t,O);fill(p,b,t=>1+t*t,-s.d/2,s.d/2,'#cb713633');msg=`矩形面积=(1/Δ)×Δ=1；抽样近似 I_Δ=1+Δ²/12=${f(1+s.d*s.d/12)}；理想值 f(0)=1；误差=${f(s.d*s.d/12)}。绿箭头表示理想单位权重，不是高度 1 的函数。`;}
+else if(w.id==='derivative'){a=axes(p,0,2,-1,4,-.2,3.5,'x(t)=t[u(t)−u(t−T)]');line(p,a,t=>t>0&&t<s.T?t:0);b=axes(p,1,2,-1,4,-3.5,1.5,'普通斜率 + 在 T 处的冲激');line(p,b,t=>t>0&&t<s.T?1:0,O);arrow(p,b,s.T,-s.T);msg=`普通斜率面积=${f(s.T)}；t=T 的跳变冲激权重=−${f(s.T)}；总积分=0，等于 x(+∞)−x(−∞)。`;}
+else if(w.id==='time-invariance'){const A=t=>s.type==='delay'?M.base(t-1-s.shift):s.type==='gain'?t*M.base(t-s.shift):M.base(2*t-s.shift),C=t=>s.type==='delay'?M.base(t-s.shift-1):s.type==='gain'?(t-s.shift)*M.base(t-s.shift):M.base(2*(t-s.shift));a=axes(p,0,1,-1,7,-.3,6,'两条路径的输出');line(p,a,A);line(p,a,C,O,[5,4]);let err=0;for(let i=0;i<500;i++){let t=-1+8*i/499;err=Math.max(err,Math.abs(A(t)-C(t)));}msg=`当前图内最大差约 ${f(err)}。${s.type==='delay'?'纯延迟两路径代数相同，时不变。':s.shift===0?'t₀=0 只是退化重合；改变延迟才能看见反例。':'当前差异就是时变的一个具体反例。'}`;}
+else if(w.id==='linearity'){const fun=x=>s.type==='linear'?2*x:s.type==='square'?x*x:x+1,A=t=>fun(s.a*Math.sin(t)+s.b*Math.cos(t)),C=t=>s.a*fun(Math.sin(t))+s.b*fun(Math.cos(t));let vals=Array.from({length:301},(_,i)=>[A(M.TAU*i/300),C(M.TAU*i/300)]).flat();a=axes(p,0,1,0,M.TAU,Math.min(-1,...vals)-.3,Math.max(1,...vals)+.3,'叠加测试两条路径');line(p,a,A);line(p,a,C,O,[5,4]);let err=Math.max(...Array.from({length:301},(_,i)=>Math.abs(A(M.TAU*i/300)-C(M.TAU*i/300))));msg=`当前图内最大差约 ${f(err)}。${s.type==='linear'?'S{x}=2x 对任意输入与系数都满足叠加。':err<1e-8?'这一组参数碰巧重合，不足以证明线性；改参数再看。':'存在差异，已经足以否定线性。'}`;}
+else if(w.id==='decompose'){const x=[1,2,-1],h=[1,.5],all=M.convolve(x,h);a=axes(p,0,2,-.5,3.5,-1.5,2.8,'每个输入样本对应的一份 h[n−k]','n');b=axes(p,1,2,-.5,3.5,-1,3,'这些贡献相加形成输出','n');for(let n=0;n<4;n++){let sum=0;for(let k=0;k<s.count;k++){let v=x[k]*(h[n-k]||0);stem(p,a,n,v,[B,O,G][k],(k-1)*4);sum+=v;}stem(p,b,n,sum);stem(p,b,n,all[n],O,0,true);}msg=`已加入 k=0…${s.count-1}；完整输出 y[0…3]=[1, 2.5, 0, −0.5]。当加入 k=2 后，n=2 处 1+(−1)=0。`;}
+else if(w.id==='dt-convolution'){const x=[1,2,-1],h=[1,.5];a=axes(p,0,3,-2,5,-1.4,2.6,'固定 x[k] / 移动 h[n−k]','k');b=axes(p,1,3,-2,5,-1.4,2.6,'当前相乘的每一项','k');const c=axes(p,2,3,-1,4,-.8,3,'把乘积求和，得到当前 y[n]','n');for(let k=-2;k<=5;k++){const v=x[k]||0,z=h[s.n-k]||0;stem(p,a,k,v,B,-2);stem(p,a,k,z,O,2);stem(p,b,k,v*z,G);}M.convolve(x,h).forEach((v,n)=>stem(p,c,n,v));const val=M.convAt(x,h,s.n);dot(p,c,s.n,val,O);msg=`n=${s.n}：${x.map((v,k)=>`${v}×${h[s.n-k]||0}`).join(' + ')} = ${f(val)}。求和变量是 k，当前输出索引是 n。`;}
+else if(w.id==='geometric'){a=axes(p,0,2,0,15,-1.1,1.3,'当前包含 k≤n 的输入项','k');let sums=Array.from({length:16},(_,n)=>M.geometric(s.alpha,n));b=axes(p,1,2,0,15,-.2,Math.max(...sums)*1.15+.1,'有限几何和','n');for(let k=0;k<16;k++){stem(p,a,k,s.alpha**k,k<=s.n?B:'#c8d3cf');stem(p,b,k,sums[k],O);}dot(p,b,s.n,sums[s.n]);msg=`α=${f(s.alpha)}，共 ${s.n+1} 项，Σ₀ⁿα^k=${f(sums[s.n])}。${s.alpha===1?'α=1 时结果=n+1。':'先确定 n+1 项，再用几何和公式。'}`;}
+else if(w.id==='ct-convolution'){a=axes(p,0,2,-4,7,-.2,1.5,'固定 x(τ) 与移动 h(t−τ)','τ');const L=Math.max(0,s.t-s.B),U=Math.min(s.A,s.t);fill(p,a,()=>1,L,U,'#39846b44');line(p,a,v=>v>0&&v<s.A?1:0);line(p,a,v=>s.t-v>0&&s.t-v<s.B?1:0,O,[4,3]);b=axes(p,1,2,-1,7,0,3.5,'输出等于重叠面积');line(p,b,t=>M.rectOverlap(t,s.A,s.B));dot(p,b,s.t,M.rectOverlap(s.t,s.A,s.B),O);msg=`L=max(0,t−B)=${f(L)}，U=min(A,t)=${f(U)}；${L<U?`重叠 [${f(L)},${f(U)}]`:'无正长度重叠'}；y(t)=max(0,U−L)=${f(M.rectOverlap(s.t,s.A,s.B))}。`;}
+else if(w.id==='ct-exponential'){const fn=v=>v>=0&&v<=s.t?Math.exp(-s.a*v-s.b*(s.t-v)):0;a=axes(p,0,2,0,5,0,1.2,'当前 x(τ)h(t−τ)，仅在 0≤τ≤t 非零','τ');fill(p,a,fn,0,s.t);line(p,a,fn);const ys=Array.from({length:101},(_,i)=>M.expConv(i/20,s.a,s.b)),max=Math.max(...ys);b=axes(p,1,2,0,5,0,max*1.2+.05,'卷积输出 y(t)');line(p,b,t=>M.expConv(t,s.a,s.b),O);dot(p,b,s.t,M.expConv(s.t,s.a,s.b));msg=`t=${f(s.t)}，y(t)=${f(M.expConv(s.t,s.a,s.b))}。${Math.abs(s.a-s.b)<1e-8?'a=b，使用 t e^(−at)。':s.b===0?'b=0：h=u，输出趋于 1/a。':'a≠b：使用两指数之差除以 b−a。'}`;}
+else if(w.id==='stability'){const h=Array.from({length:s.N+1},(_,n)=>s.alpha**n),x=h.map((_,n)=>s.input==='step'?1:(-1)**n),y=M.recursive(s.alpha,x),maxH=Math.max(1,...h.map(Math.abs)),maxY=Math.max(1,...y.map(Math.abs));a=axes(p,0,2,0,s.N,-maxH*1.15,maxH*1.15,'有限区间冲激响应','n');b=axes(p,1,2,0,s.N,-maxY*1.15,maxY*1.15,'当前有界输入的零状态输出','n');h.forEach((v,n)=>stem(p,a,n,v));y.forEach((v,n)=>stem(p,b,n,v,O));const ab=Math.abs(s.alpha);msg=`Σ₀ᴺ|h|=${f(h.reduce((z,v)=>z+Math.abs(v),0))}；y[N]=${f(y.at(-1))}。解析判定：${ab<1?`稳定，完整绝对和=1/(1−|α|)=${f(1/(1-ab))}。`:'不稳定；有限画面不代替全时间证明，试切换输入寻找增长反例。'}`;}
+else if(w.id==='step-response'){const h=t=>t>=0?Math.exp(-t/s.tau)/s.tau:0;a=axes(p,0,2,0,6,0,1.2/s.tau,'冲激响应 h 与累计面积');fill(p,a,h,0,s.t);line(p,a,h);b=axes(p,1,2,0,6,0,1.15,'阶跃响应 s(t)');line(p,b,t=>M.stepResponse(t,s.tau),O);dot(p,b,s.t,M.stepResponse(s.t,s.tau));dot(p,b,s.tau,1-Math.exp(-1),B);msg=`τ=${f(s.tau)}，s(${f(s.t)})=${f(M.stepResponse(s.t,s.tau))}；s(τ)=1−1/e≈0.6321；s(∞)=1。`;}
+else if(w.id==='ode'){const same=Math.abs(s.a+s.b)<1e-9,fn=t=>M.ode(t,s.a,s.b),pp=t=>Math.exp(s.b*t)/(s.a+s.b),hh=t=>-Math.exp(-s.a*t)/(s.a+s.b);const vals=Array.from({length:201},(_,i)=>same?[fn(i/50)]:[fn(i/50),pp(i/50),hh(i/50)]).flat();a=axes(p,0,1,0,4,Math.min(0,...vals)-.2,Math.max(...vals)*1.1+.2,'一阶方程的零状态解');line(p,a,fn);if(!same){line(p,a,pp,O,[4,4]);line(p,a,hh,G,[4,4]);}dot(p,a,s.t,fn(s.t));msg=`a=${s.a}，b=${s.b}，y(${f(s.t)})=${f(fn(s.t))}。${same?'a+b=0，用 t e^(−at)；旧特解猜法失效，不显示其分解。':'总响应在 t=0 为 0：特解与齐次项相消。'}`;}
+else if(w.id==='recurrence'){const input=Array.from({length:16},(_,n)=>s.input==='step'?1:n===0?1:0),y=M.recursive(s.alpha,input,s.initial),zero=M.recursive(s.alpha,input),min=Math.min(0,...y,...zero),max=Math.max(1,...y,...zero);a=axes(p,0,1,0,15,min-.3,max+.5,'总响应与零状态响应','n');for(let n=0;n<16;n++){stem(p,a,n,y[n],B,-2);stem(p,a,n,zero[n],O,2,true);}dot(p,a,s.n,y[s.n]);const prev=s.n===0?s.initial:y[s.n-1];msg=`y[${s.n}]=${f(s.alpha)}×(${f(prev)})+${input[s.n]}=${f(y[s.n])}；零输入分量=α^(n+1)y[−1]=${f(s.alpha**(s.n+1)*s.initial)}。`;}
+else if(w.id==='singularity'){a=axes(p,0,2,0,4,0,1.15/s.d,'输入脉冲：面积始终为 1');line(p,a,t=>t>=0&&t<=s.d?1/s.d:0);b=axes(p,1,2,0,4,0,1.2,'有限宽输入输出与理想冲激响应');line(p,b,t=>M.pulseResponse(t,s.d));line(p,b,t=>Math.exp(-t),O,[5,4]);msg=`Δ=${f(s.d)}；t=2 时实际 y=${f(M.pulseResponse(2,s.d))}，理想 h=e^(−2)=${f(Math.exp(-2))}。Δ→0 时对固定 t>0 趋近 h；跳变点 t=0 不用普通点值收敛来定义冲激。`;}
+w.box.querySelector('.lab-status').textContent=msg;
+}
+function pauseAll(){widgets.forEach(w=>{w.playing=false;w.last=0;w.play.textContent='播放演示';});}
+function refresh(){widgets.forEach(draw);}
+function init(){let timer;window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(refresh,100);});document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseAll();});function tick(now){for(const w of widgets){if(!w.playing||w.box.closest('[hidden]')||document.hidden)continue;const key=D[w.id].sweep,f=w.fields[key],spec=f.spec,delay=spec.step>=1?650:70;if(now-w.last<delay)continue;w.last=now;const value=w.state[key]+spec.step;w.state[key]=value>spec.max+1e-8?spec.min:Number(value.toFixed(8));w.sync();draw(w);}requestAnimationFrame(tick);}requestAnimationFrame(tick);refresh();}
+return{make,init,pauseAll,refresh};
+})();
+</script><script>'use strict';
+(()=>{
+const host=document.getElementById('lessons'),toc=document.getElementById('toc'),storageKey='signals-ch1-detailed-20261016';let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(!saved||typeof saved!=='object'||Array.isArray(saved))saved={};}catch{}
+const homeLink=document.createElement('a');homeLink.className='toc-link';homeLink.href='#start';homeLink.textContent='学习总览 / 章节选择';toc.append(homeLink);
+let lastGroup='';
+for(const [i,l] of CourseLessons.entries()){
+ if(l.group!==lastGroup){const heading=document.createElement('p');heading.className='toc-group';heading.textContent=l.group;toc.append(heading);lastGroup=l.group;}
+ const link=document.createElement('a');link.className='toc-link';link.href='#'+l.id;link.textContent=String(i+1).padStart(2,'0')+' '+l.title;toc.append(link);
+ const section=document.createElement('section');section.className='lesson';section.id=l.id;section.innerHTML=`<div class="lesson-top"><span>${l.group}</span><span>课件：${l.pages} 页</span>${l.optional?'<span class="optional">拓展阅读</span>':''}</div><h2>${l.title}</h2>${l.body}`;
+ if(l.lab)section.append(CourseVisuals.make(l.lab));
+ const label=document.createElement('label');label.className='check';const input=document.createElement('input');input.type='checkbox';input.checked=!!saved[l.id];input.addEventListener('change',()=>{saved[l.id]=input.checked;try{localStorage.setItem(storageKey,JSON.stringify(saved));}catch{}progress();});label.append(input,document.createTextNode('我能不看公式解释这一节的主要思路'));section.append(label);host.append(section);
+}
+for(const [href,label] of [['#practice','分步例题与自测'],['#sources','资料与页码']]){const link=document.createElement('a');link.className='toc-link';link.href=href;link.textContent=label;toc.append(link);}
+function progress(){document.getElementById('readingProgress').textContent=`已自评掌握 ${CourseLessons.filter(l=>saved[l.id]).length}/${CourseLessons.length} 节（仅本浏览器本地址保存）`;}
+progress();
+const questionHost=document.getElementById('questions');
+const pretty=s=>s.replace(/e\^\{([^}]+)\}/g,'e<sup>$1</sup>');
+for(const [i,q] of CourseQuestions.entries()){
+ const article=document.createElement('article');article.className='question';article.innerHTML=`<h3>${String(i+1).padStart(2,'0')} · ${q.title}</h3><p>${pretty(q.q)}</p><form class="answer-form"><label for="answer-${i}">关键数值：</label><input id="answer-${i}" type="number" step="any" required aria-label="第${i+1}题答案"><span>${q.unit}</span><button>核对这一步</button></form><p class="feedback" aria-live="polite"></p><details><summary>展开完整推导与检查</summary><p>${pretty(q.solution)}</p></details>`;
+ article.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const field=article.querySelector('input'),v=Number(field.value),pass=Number.isFinite(v)&&Math.abs(v-q.answer)<=.001;article.querySelector('.feedback').textContent=pass?'✓ 这一步正确。继续检查完整推导里的符号、归一化和适用条件。':'再核对一次。先列出公式与单位，可展开下面的逐步解答。';});questionHost.append(article);
+}
+// Local typesetting for the explicit sum/integral limits; no network math renderer.
+for(const block of document.querySelectorAll('.eq'))for(const node of Array.from(block.childNodes)){
+ if(node.nodeType!==Node.TEXT_NODE)continue;const found=node.textContent.match(/(∑|∫|lim)\s*$/),lower=node.nextSibling;if(!found||!lower||lower.nodeName!=='SUB')continue;
+ const upper=lower.nextSibling?.nodeName==='SUP'?lower.nextSibling:null,op=document.createElement('span');op.className='mathop';const symbol=document.createElement('span');symbol.className='symbol';symbol.textContent=found[1];op.append(symbol);lower.className='lower';op.append(lower);if(upper){upper.className='upper';op.append(upper);}node.textContent=node.textContent.slice(0,found.index);node.after(op);
+}
+const index=document.getElementById('chapterIndex');let groupBox=null;
+for(const [i,l] of CourseLessons.entries()){
+ if(!groupBox||groupBox.dataset.group!==l.group){groupBox=document.createElement('section');groupBox.className='chapter-group';groupBox.dataset.group=l.group;const title=document.createElement('h3');title.textContent=l.group;groupBox.append(title);index.append(groupBox);}
+ const link=document.createElement('a');link.href='#'+l.id;link.textContent=String(i+1).padStart(2,'0')+' · '+l.title;groupBox.append(link);
+}
+const pageList=[{id:'start',title:'学习总览'},...CourseLessons.map(l=>({id:l.id,title:l.title})),{id:'practice',title:'12道分步例题与自测'},{id:'sources',title:'资料与页码'}];
+for(const page of pageList){page.element=document.getElementById(page.id);page.element.classList.add('course-page');page.element.hidden=true;}
+document.documentElement.classList.add('paged');
+function showPage(focus=false){
+ let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{id='start';}
+ let position=pageList.findIndex(p=>p.id===id);if(position<0)position=0;const current=pageList[position];
+ CourseVisuals.pauseAll();
+ for(const page of pageList){page.element.hidden=page!==current;page.element.classList.toggle('is-current',page===current);}
+ toc.querySelectorAll('.toc-link').forEach(link=>{const active=link.hash==='#'+current.id;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
+ for(const pager of document.querySelectorAll('.reader-pager')){
+  const prev=pager.querySelector('.page-prev'),next=pager.querySelector('.page-next');prev.hidden=position===0;next.hidden=position===pageList.length-1;
+  if(position>0){prev.href='#'+pageList[position-1].id;prev.setAttribute('aria-label','上一节：'+pageList[position-1].title);}
+  if(position<pageList.length-1){next.href='#'+pageList[position+1].id;next.setAttribute('aria-label','下一节：'+pageList[position+1].title);}
+  pager.querySelector('.page-position').textContent=`第 ${position+1} / ${pageList.length} 页 · ${current.id==='start'?'学习总览':position<=CourseLessons.length?'知识点 '+position:current.title}`;
+ }
+ document.title=current.title+' · 信号与系统第一章';
+ sidebar.classList.remove('open');menu.setAttribute('aria-expanded','false');
+ if(focus){window.scrollTo({top:0,behavior:'instant'});const heading=current.element.querySelector('h1,h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
+ CourseVisuals.refresh();
+}
+const search=document.getElementById('search');search.addEventListener('input',()=>{const query=search.value.trim().toLowerCase();let count=0;for(const l of CourseLessons){const section=document.getElementById(l.id),match=!query||section.textContent.toLowerCase().includes(query);toc.querySelector(`a[href="#${l.id}"]`).classList.toggle('hidden-by-search',!match);if(match)count++;}document.getElementById('searchStatus').textContent=query?`找到 ${count} 节；点击目录打开，清空恢复全部。`:'';});
+const menu=document.getElementById('menu'),sidebar=document.getElementById('sidebar');menu.addEventListener('click',()=>{const open=sidebar.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});toc.addEventListener('click',e=>{if(e.target.closest('a')){sidebar.classList.remove('open');menu.setAttribute('aria-expanded','false');}});
+window.addEventListener('hashchange',()=>showPage(true));
+document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();const main=document.getElementById('main');main.tabIndex=-1;main.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});});
+document.getElementById('print').addEventListener('click',()=>window.print());showPage();CourseVisuals.init();
+})();
+</script></body></html>

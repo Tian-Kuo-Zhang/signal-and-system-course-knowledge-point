@@ -1,0 +1,31 @@
+{
+  "version": "2026-10-19",
+  "format": "standalone-offline-html",
+  "files": [
+    {
+      "file": "chapter-1.html",
+      "bytes": 90078,
+      "sha256": "c4ba77e9ab2eebb5041ffb9d27520b6380f06c6c7f8d4cb91d62840cdd3ae332"
+    },
+    {
+      "file": "chapter-2.html",
+      "bytes": 85199,
+      "sha256": "bb40e4ee03f75137d9361c423546356b7a4ce9e0e6e2cc3f1114b5ac1f072845"
+    },
+    {
+      "file": "chapter-3.html",
+      "bytes": 87399,
+      "sha256": "45677d5e9f54e8a28b5c3359638e70eee657e490a6ac4e451f02640a4fb572bc"
+    },
+    {
+      "file": "chapter-4.html",
+      "bytes": 1140446,
+      "sha256": "18a0698397aae87839caf8d26432c6621e4f20960a954a47f148a48b108b819d"
+    },
+    {
+      "file": "index.html",
+      "bytes": 3465,
+      "sha256": "e59060807975d932302ba3ed8c485c6ffd418530e1fec270a79c402e08acea6e"
+    }
+  ]
+}
