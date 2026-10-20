@@ -30,4 +30,4 @@ GitHub 仓库：https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowl
 相应原课件名称：Chapter1.pdf、第二章.pdf、第三章.pdf、第四章.pdf。
 维护源文件保存在本地“讲义维护资料”，不属于这个阅读包。分享包没有本机绝对文件路径、外部脚本、统计追踪或网络请求。
 
-整理版本：2026-10-19
+整理版本：2026-10-20
