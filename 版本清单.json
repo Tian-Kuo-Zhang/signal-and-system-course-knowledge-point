@@ -1,31 +1,53 @@
 {
-  "version": "2026-10-20",
+  "version": "1.1.0",
+  "date": "2026-10-27",
   "format": "standalone-offline-html",
+  "chapters": 8,
   "files": [
     {
       "file": "chapter-1.html",
-      "bytes": 90078,
-      "sha256": "c4ba77e9ab2eebb5041ffb9d27520b6380f06c6c7f8d4cb91d62840cdd3ae332"
+      "bytes": 95263,
+      "sha256": "2385d0cf119b7e8bb11ffe55b1688a2f08a744a25c46540dd7d8b70a4e3559bb"
     },
     {
       "file": "chapter-2.html",
-      "bytes": 101294,
-      "sha256": "f9f188b6097bdfa614190a78c363e1d987318deb55d8d2c929d05f9cb80f5c21"
+      "bytes": 105108,
+      "sha256": "af99d98b01800ae8917837af0316c946653c99339b5882b79c6daf8f7d2d89c1"
     },
     {
       "file": "chapter-3.html",
-      "bytes": 91750,
-      "sha256": "68d13fb064027fff5f98abbf32acab913fbd23c2a295cee93431af8c588dabe5"
+      "bytes": 96175,
+      "sha256": "3f626c8930c6d919a0fd721b8931b7fc232b1fb047b93ad7f4e5f6f1b529e987"
     },
     {
       "file": "chapter-4.html",
-      "bytes": 1153367,
-      "sha256": "7d818a68cf42569e8ff7be8ec91bbab09b1c5d6d4aa28e0d822ee50eb31de26f"
+      "bytes": 1162271,
+      "sha256": "d4cf3759f2bafc8baa1b9e565252046e86c0a72300568b478df765ebfb5805fb"
+    },
+    {
+      "file": "chapter-5.html",
+      "bytes": 175488,
+      "sha256": "b8bcd76ab951ae97e31533889f0ef7bee41e0377f1a63c56cc6fb1d14b0b44fa"
+    },
+    {
+      "file": "chapter-6.html",
+      "bytes": 104610,
+      "sha256": "3e1d05231369281d6a9334dd074d470aae7f8a9228e8a3cbd41ea4ae177690bd"
+    },
+    {
+      "file": "chapter-7.html",
+      "bytes": 109961,
+      "sha256": "553e0340c08091816d74cedd44a30427c83cfcc3a5a61ec4f5d8acdc2277ee2e"
+    },
+    {
+      "file": "chapter-8.html",
+      "bytes": 112605,
+      "sha256": "4ceaadc3b8b26ab7da03f66a7776883faf5511304b74ec35d26e53c3b7b3a294"
     },
     {
       "file": "index.html",
-      "bytes": 3465,
-      "sha256": "b784bce2a25d91eea6c0d6290c8edadb924fb97f6a183a2f812898fe99db5acb"
+      "bytes": 5363,
+      "sha256": "ace3aeed48c6b3b32fdf8383cd356c6628df8a327189f6a40639578ee0b37dfd"
     }
   ]
 }
