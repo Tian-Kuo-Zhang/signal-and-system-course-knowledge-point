@@ -5,7 +5,7 @@
  内容
 
 - 第一章：信号与系统基础，30 个知识点 · 11 组交互图。
-- 第二章：线性时不变系统，26 个知识点 · 10 组交互图。
+- 第二章：线性时不变系统，32 个知识点 · 10 组交互图。
 - 第三章：傅里叶级数，24 个知识点 · 9 组交互图。
 - 第四章：连续时间傅里叶变换，53 个精讲单元 · 22 组交互实验。
 - 第五章：离散时间傅里叶变换，19 个分页单元 · 4 处交互实验。
@@ -15,9 +15,11 @@
 
  本版更新
 
-新增第五至八章，共 66 个分页单元、22 处交互实验、16 道即时反馈题，并有正文中的展开例题解答。按照《第5-8章.pdf》123页的范围整理，补充概念由来、符号说明、完整计算步骤、适用条件及课件只有图片时缺少的解释。
+逐节检查第一至第八章，共 205 个阅读单元。围绕“要解决什么问题、符号表示什么、每一步怎么算、结果怎样检查”补全正文与例题；关键推导直接显示，练习答案保留折叠。原有目录、书签标识和交互实验保留。
 
-前四章补充章节开场串讲和 65 处知识点衔接（含开场），重点解释冲激与积分、傅里叶系数与频谱、输入与系统响应、微积分与零频项之间的关系。已有书签与动画保留。
+重点补全能量与周期计算、卷积的区间与求和、微分方程和零输入/零状态响应、傅里叶系数与性质、部分分式、群时延与二阶系统、采样重建，以及同步解调和 IQ 两路乘积的展开。此前已有清楚推导的内容经检查后保留。
+
+本版 v1.2.0 包含全部八章逐节修订。在线阅读与离线 HTML 使用同一套内容；保留 74 组交互实验，并修正手机端长公式的显示。
 
  阅读方法
 
@@ -37,8 +39,8 @@ index.html 是八章入口；chapter-1.html 至 chapter-8.html 为阅读文件�
 
  在线阅读与下载
 
-[在线阅读八章讲义](https://tian-kuo-zhang.github.io/signal-and-system-course-knowledge-point/) · [下载完整离线包（ZIP）](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point/releases/download/v1.1.0/signals-and-systems-v1.1.0.zip) · [版本说明](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point/releases/tag/v1.1.0)
+[在线阅读八章讲义](https://tian-kuo-zhang.github.io/signal-and-system-course-knowledge-point/) · [下载完整离线包 v1.2.0（ZIP）](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point/releases/download/v1.2.0/signals-and-systems-v1.2.0.zip) · [本版更新说明](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point/releases/tag/v1.2.0)
 
 解压后打开 index.html 即可开始阅读。更新时重新下载整包，避免新旧章节混用。
 
-[项目仓库](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point) · 版本 v1.1.0 · 2026-10-27。
+[项目仓库](https://github.com/Tian-Kuo-Zhang/signal-and-system-course-knowledge-point) · 版本 v1.2.0 · 2026-10-27。

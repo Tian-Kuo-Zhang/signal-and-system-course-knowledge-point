@@ -1,53 +1,53 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "date": "2026-10-27",
   "format": "standalone-offline-html",
   "chapters": 8,
   "files": [
     {
       "file": "chapter-1.html",
-      "bytes": 95263,
-      "sha256": "2385d0cf119b7e8bb11ffe55b1688a2f08a744a25c46540dd7d8b70a4e3559bb"
+      "bytes": 269365,
+      "sha256": "0bf189cc296473ceb4336a8006ce17b0ebdd0a0701167a508da14629ed7ed2ba"
     },
     {
       "file": "chapter-2.html",
-      "bytes": 105108,
-      "sha256": "af99d98b01800ae8917837af0316c946653c99339b5882b79c6daf8f7d2d89c1"
+      "bytes": 235671,
+      "sha256": "a2777a2525ffecaa5023dbe88d118518b7ecf9d913748f213cfde48085b298ed"
     },
     {
       "file": "chapter-3.html",
-      "bytes": 96175,
-      "sha256": "3f626c8930c6d919a0fd721b8931b7fc232b1fb047b93ad7f4e5f6f1b529e987"
+      "bytes": 253624,
+      "sha256": "a8c57e319a0ff1172fbdaaff385d83421e96fac92268c8911c6eacbdfc963baa"
     },
     {
       "file": "chapter-4.html",
-      "bytes": 1162271,
-      "sha256": "d4cf3759f2bafc8baa1b9e565252046e86c0a72300568b478df765ebfb5805fb"
+      "bytes": 1247646,
+      "sha256": "383fb1f2190cf58b6d2d29cb73044f623111de2219ada96825c009b5b646aa33"
     },
     {
       "file": "chapter-5.html",
-      "bytes": 175488,
-      "sha256": "b8bcd76ab951ae97e31533889f0ef7bee41e0377f1a63c56cc6fb1d14b0b44fa"
+      "bytes": 269122,
+      "sha256": "7ef8aa76949da971a64b6c21b7e3c5ced0ba6481bfe8a67c982abca33664db2a"
     },
     {
       "file": "chapter-6.html",
-      "bytes": 104610,
-      "sha256": "3e1d05231369281d6a9334dd074d470aae7f8a9228e8a3cbd41ea4ae177690bd"
+      "bytes": 184401,
+      "sha256": "14c7d3a8b00e93e119fda360f677116d755ed26167d71947857ae85a2df36983"
     },
     {
       "file": "chapter-7.html",
-      "bytes": 109961,
-      "sha256": "553e0340c08091816d74cedd44a30427c83cfcc3a5a61ec4f5d8acdc2277ee2e"
+      "bytes": 168466,
+      "sha256": "277c388627d4c541bd899ba72382ed5bd946ccdb820c6ec4bf50bbf1241eeeca"
     },
     {
       "file": "chapter-8.html",
-      "bytes": 112605,
-      "sha256": "4ceaadc3b8b26ab7da03f66a7776883faf5511304b74ec35d26e53c3b7b3a294"
+      "bytes": 174564,
+      "sha256": "0b6cee4395bd0759c15b716f102af1a5ef6d1692531cb723d97f36d76df1eeee"
     },
     {
       "file": "index.html",
-      "bytes": 5363,
-      "sha256": "ace3aeed48c6b3b32fdf8383cd356c6628df8a327189f6a40639578ee0b37dfd"
+      "bytes": 5240,
+      "sha256": "9134ed99ce83a6f2ddbdc216619568b39cbb219f6f6fb8e8084a109d2cdd4f63"
     }
   ]
 }
